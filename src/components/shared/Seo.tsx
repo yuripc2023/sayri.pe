@@ -1,0 +1,2 @@
+import { useEffect } from 'react'
+export function Seo({title,description,noindex=false}:{title:string;description?:string;noindex?:boolean}) { useEffect(()=>{document.title=title; const set=(n:string,v:string)=>{let e=document.querySelector(`meta[name="${n}"]`) as HTMLMetaElement|null;if(!e){e=document.createElement('meta');e.name=n;document.head.append(e)}e.content=v};if(description)set('description',description);set('robots',noindex?'noindex,follow':'index,follow')},[title,description,noindex]);return null }

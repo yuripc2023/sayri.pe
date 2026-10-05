@@ -1,0 +1,1 @@
+export const contact = { whatsapp: 'https://wa.me/51999669634?text=Hola%2C%20quisiera%20conocer%20Sayri%20y%20solicitar%20una%20demostraci%C3%B3n.', calendarUrl: import.meta.env.VITE_CALENDAR_URL as string | undefined }

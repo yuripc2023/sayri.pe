@@ -1,0 +1,55 @@
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+@source "./**/*.tsx";
+
+/* Intentionally no Preflight: the existing site keeps its CSS conventions. */
+section.sayri-experience.sayri-experience{--story-bg:#081824;--story-ink:#f3f7fb;--story-muted:#a7bccb;--story-accent:#6ec8ff;--story-progress:0;position:relative;padding:0;background:var(--story-bg);color:var(--story-ink);isolation:isolate;overflow:hidden}
+.sayri-experience.is-animated{height:calc(100svh - 78px);min-height:560px}
+.story-topline{position:relative;z-index:3;min-height:72px;margin:0 4.5%;border-bottom:1px solid #ffffff1a;font-size:.61rem;letter-spacing:.12em;font-weight:600}
+.story-topline-divider{margin:0 12px;color:var(--story-accent)}
+.story-text-button{border:0;background:none;color:var(--story-muted);font:inherit;letter-spacing:0;padding:10px 0;cursor:pointer}
+.story-text-button:hover,.story-text-button:focus-visible{color:#fff}
+.sayri-experience :focus-visible{outline:2px solid var(--story-accent);outline-offset:5px}
+.story-canvas{position:absolute;inset:72px 0 85px 35%;pointer-events:none}
+.story-overlays{position:absolute;left:6%;top:27%;width:35%;max-width:510px;z-index:2}
+.story-copy{position:absolute;inset:0 auto auto 0;width:100%;visibility:hidden;opacity:0}
+.story-copy:first-child{opacity:1;visibility:visible}
+.story-eyebrow{color:var(--story-accent);font-size:.65rem;letter-spacing:.14em;font-weight:600;margin-bottom:26px}
+.sayri-experience h2{font-size:clamp(2.5rem,4.4vw,5rem);line-height:1.02;letter-spacing:-.045em;margin-bottom:24px;font-weight:500;text-wrap:balance}
+.story-description{font-size:clamp(.93rem,1.15vw,1.12rem);color:var(--story-muted);line-height:1.7;max-width:420px}
+.story-examples{padding:0;margin:26px 0 0;list-style:none;display:flex;flex-wrap:wrap;gap:10px 16px;color:#c6dbe9;font-size:.73rem;line-height:1.6}
+.story-examples li{border-left:1px solid #4ba7df;padding-left:10px}
+.story-stage-label{position:absolute;right:8%;bottom:20%;color:#acc1cf;font-size:.65rem;letter-spacing:.18em;text-transform:uppercase}
+.story-stage-label span{display:none}
+.sayri-experience[data-chapter="0"] [data-label="0"],.sayri-experience[data-chapter="1"] [data-label="1"],.sayri-experience[data-chapter="2"] [data-label="2"],.sayri-experience[data-chapter="3"] [data-label="3"],.sayri-experience[data-chapter="4"] [data-label="4"],.sayri-experience[data-chapter="5"] [data-label="5"],.sayri-experience[data-chapter="6"] [data-label="6"],.sayri-experience[data-chapter="7"] [data-label="7"]{display:block}
+.story-bottomline{position:absolute;bottom:0;left:4.5%;right:4.5%;min-height:85px;display:flex;align-items:center;gap:30px;border-top:1px solid #ffffff1a}
+.story-bottomline:before{content:"";position:absolute;top:-1px;left:0;height:1px;width:100%;background:var(--story-accent);transform:scaleX(var(--story-progress));transform-origin:left}
+.story-scroll-hint{font-size:.56rem;letter-spacing:.12em;color:var(--story-muted);white-space:nowrap;margin:0}.story-scroll-hint span{color:var(--story-accent);margin-left:12px}
+.story-chapters{display:flex;justify-content:center;flex:1;gap:12px}.story-chapters button{font:inherit;border:0;background:none;padding:12px 7px;color:#9bafbe;cursor:pointer;font-size:.65rem;display:flex;gap:8px;align-items:center}.chapter-name{display:none}.chapter-number{font-variant-numeric:tabular-nums}.story-chapters button[aria-current=step]{color:var(--story-accent)}.story-chapters button[aria-current=step] .chapter-name{display:inline}
+.story-ecosystem-link{font-size:.7rem;white-space:nowrap}
+.story-loading{position:absolute;left:50%;top:50%;width:15px;height:15px;border:1px solid var(--story-accent);transform:rotate(45deg)}
+.story-reading{list-style:none;margin:0;padding:45px 6% 80px;display:grid;gap:75px}.story-reading>li{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;max-width:1200px;width:100%;margin:auto}.story-reading h2{font-size:clamp(2rem,3.5vw,3.8rem)}.reading-glyph{height:180px;display:grid;place-content:center;position:relative;border-bottom:1px solid #ffffff1a}.reading-glyph span{color:#a1bbcc;font-size:.7rem;position:absolute;left:0;top:20px}.reading-glyph i{display:block;width:62px;height:62px;border:1px solid #6ec8ff;transform:rotate(45deg);box-shadow:15px 15px 0 #6ec8ff12}.story-reading>li:nth-child(2n) .reading-glyph i{box-shadow:15px 15px 0 #6ec8ff33,30px 30px 0 #6ec8ff11}
+@media(max-width:1100px){.story-chapters{gap:5px}.story-bottomline{gap:12px}.story-scroll-hint{font-size:.5rem}.story-overlays{width:40%;left:5%}.story-canvas{left:38%}.story-topline{font-size:.55rem}}
+@media(max-width:680px){.sayri-experience.is-animated{height:calc(100svh - 64px);min-height:650px}.story-topline{min-height:62px;align-items:flex-start;padding-top:18px;font-size:.51rem;gap:10px}.story-topline>span{max-width:145px;line-height:1.6}.story-topline>div{flex-direction:column;gap:0;align-items:flex-end}.story-text-button{padding:3px 0}.story-overlays{left:6%;top:100px;width:88%;max-width:none}.sayri-experience h2{font-size:clamp(2rem,8.7vw,3.2rem);max-width:420px;margin-bottom:14px}.story-eyebrow{font-size:.56rem;margin-bottom:17px}.story-description{font-size:.86rem;line-height:1.55;max-width:95%}.story-examples{margin-top:13px;font-size:.64rem;gap:7px 12px}.story-canvas{inset:320px 0 66px}.story-stage-label{right:8%;bottom:95px;font-size:.52rem}.story-bottomline{min-height:65px;gap:8px}.story-scroll-hint{display:none}.story-chapters{justify-content:flex-start;gap:3px}.story-chapters button{font-size:.6rem;padding:12px 7px}.story-chapters .chapter-name{display:none!important}.story-ecosystem-link{font-size:.6rem}.story-reading{padding-top:35px;gap:50px}.story-reading>li{grid-template-columns:1fr;gap:22px}.reading-glyph{height:110px}.reading-glyph i{width:40px;height:40px}}
+@media(prefers-reduced-motion:reduce){.sayri-experience *{transition:none!important;animation:none!important}}
+
+body:has(.sayri-experience[data-visible="true"]) .whatsapp{bottom:110px}
+
+.experience-cta{background:var(--paper)}.experience-cta h2{max-width:950px}.experience-cta .actions{flex-wrap:wrap}#despues-de-la-historia{scroll-margin-top:78px}main section[id]{scroll-margin-top:95px}@media(max-width:680px){#despues-de-la-historia{scroll-margin-top:64px}main section[id]{scroll-margin-top:80px}}
+
+/* Fit the global navigation on laptops after adding direct contact access. */
+@media(min-width:681px) and (max-width:1200px){.header nav{gap:13px}.header nav .nav-cta{display:none}.header-right{gap:18px}}
+@media(max-height:700px) and (min-width:681px){.story-overlays{top:24%}.sayri-experience h2{font-size:clamp(2.2rem,4vw,4rem)}.story-eyebrow{margin-bottom:17px}.story-description{font-size:.93rem;line-height:1.55}.story-examples{margin-top:17px}}
+.story-ecosystem-link{margin-right:55px}
+@media(min-width:681px) and (max-width:900px){
+  .sayri-experience.is-animated{min-height:740px}
+  .story-overlays{left:6%;top:110px;width:88%;max-width:590px}
+  .sayri-experience h2{font-size:clamp(2.4rem,5.5vw,3.4rem);max-width:590px}
+  .story-description{max-width:550px;font-size:1rem}
+  .story-canvas{inset:365px 5% 85px}
+  .story-stage-label{bottom:112px}
+  .header nav{display:none;position:absolute;top:78px;left:0;right:0;background:var(--paper);padding:22px;flex-direction:column;align-items:flex-start;border-bottom:1px solid var(--line)}
+  .header nav.open{display:flex}.header .menu{display:block;font-size:.77rem;font-weight:750}
+}
+@media(max-width:680px){.story-ecosystem-link{margin-right:50px}.story-chapters{gap:0}.story-chapters button{padding-left:5px;padding-right:5px}}

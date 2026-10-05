@@ -1,0 +1,48 @@
+# Dependencias y cachés locales
+node_modules/
+.pnpm-store/
+.vite/
+.cache/
+*.tsbuildinfo
+
+# Compilación de Vite
+/dist/
+/dist-ssr/
+
+# Capturas, reportes y resultados generados de pruebas
+/output/playwright/
+/playwright-report/
+/test-results/
+/coverage/
+/.playwright-cli/
+
+# Variables de entorno privadas; permitir plantillas compartidas
+.env
+.env.*
+!.env.example
+!.env.*.example
+!.env.sample
+!.env.template
+*.local
+
+# Configuración privada y estado local de herramientas
+/.aws/
+/.codex/
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Archivos del sistema y temporales de editores
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+*.swo
+*~
+/.idea/
+
+# Conservar código, assets, documentación, pruebas y ambos lockfiles.
