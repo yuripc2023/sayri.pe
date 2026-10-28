@@ -1,0 +1,20 @@
+{
+  "tool": "image_gen (built-in)",
+  "reference": "../sayri-octopus.png",
+  "transparent_background": true,
+  "basePrompt": "Use case: stylized-concept. Asset type: one transparent-background website illustration for SAYRI's three-step working method. Input reference image defines the exact friendly SAYRI robotic octopus identity: pearlescent white ceramic shell, polished champagne-gold joints and eye rings, expressive blue glass lens eyes, navy circuitry and eight curled segmented tentacles. Preserve this character and premium realistic 3D product-render quality. Create one full-body octopus in a new expressive articulated pose, accompanied only by the few concept props described below. Keep it clean and readable at small website size, not overly detailed with extra equipment. No occupation-specific costume or hat. Entire character and props inside a square composition with 8% clear margin on all sides, comparable size and lighting across the illustration set. Soft studio lighting with subtle cyan rim light for a dark navy website. Genuinely transparent background; no room, floor, shadow plane, pedestal, capsule or backdrop. No text, letters, numbers, branding or watermark. No human hands or limbs. No extra characters, panels or collage. ",
+  "images": [
+    {
+      "slug": "entendemos",
+      "concept": "ENTENDEMOS — listening to people and observing their work. An empathetic attentive octopus leaning gently LEFT, head tilted slightly toward two small translucent blue conversation bubbles floating close to the left of its face, each bubble containing only three simple dots. One tentacle curves near the side of its head in a listening gesture. Two front tentacles hold a slim navy observation tablet at belly height, with a few abstract blank horizontal lines and a small simple check, while another tentacle holds a gold stylus poised above the tablet. The remaining tentacles are gathered in relaxed soft loops. Reassuring, patient personality. The bubbles and note-taking clearly convey listening and understanding, not a call-center agent: no headset."
+    },
+    {
+      "slug": "simplificamos",
+      "concept": "SIMPLIFICAMOS — turning a complicated process into a clear sequence. A thoughtful focused octopus facing three-quarter RIGHT, body leaning slightly forward. On its left one tentacle holds a small compact tangled knot of thin cyan luminous process strands; at the front-right two other tentacles gently arrange exactly three chunky blue glass cubes into a clean evenly spaced horizontal sequence connected by a thin luminous gold line, using one tentacle to position the last cube. Remaining arms curl tidily underneath, one pointing toward the finished row. A highly readable before-to-after idea embodied in physical objects: messy small knot on the left, orderly three-step path on right. No scissors, no tools, no text, arrows or extra floating icons."
+    },
+    {
+      "slug": "conectamos",
+      "concept": "CONECTAMOS — connecting the team's information so work flows. A confident welcoming octopus facing directly toward the viewer, head upright and tentacles spread into a graceful open asymmetric fan. Two front tentacles cradle a luminous cyan-blue glass core orb at belly height. Three other tentacles reach out toward exactly three small floating navy-and-cyan glass tiles containing simple relief icons: a product box, a bar chart and two people silhouettes. Thin gentle cyan arcs join each tile to the core orb, forming one clear connected network around the octopus. Golden details catch the light. Keep the silhouette uncluttered and the face clearly visible; no cables across the eyes, no extra planets or excessive effects. Coordinating, inclusive personality."
+    }
+  ]
+}

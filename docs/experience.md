@@ -207,3 +207,29 @@ Verificación realizada:
 - Capturas finales: `output/playwright/platform-{light,dark}-{1440,768,390}.png`. Se ocultó la cabecera únicamente durante esas capturas para evitar que el sticky tape el recorte del componente.
 
 No se realizó auditoría de contraste, lector de pantalla ni rendimiento; no se repitió la prueba visual del formulario con API simulada. La explicación es una presentación general de áreas de gestión, no un panel conectado a datos reales.
+
+### Filosofía presentada como método de trabajo
+
+Se reemplazó el bloque `.philosophy` por `WorkingMethod`: título de mayor ancho «Una mejor manera de trabajar empieza por entenderte», explicación y tres pasos semánticos en una lista ordenada: Entendemos, Simplificamos y Conectamos. Una línea con puntos enlaza los pasos horizontalmente en escritorio/tablet y verticalmente en móvil. El cierre conserva «La tecnología se adapta a las personas».
+
+Cada paso tiene un gráfico SVG propio (personas/conversación, simplificación de un recorrido y conexión de información), decorativo y sin fondo opaco. No se requirieron imágenes rasterizadas ni generación de imágenes. Se implementó con HTML/CSS/SVG sin dependencias adicionales. IntersectionObserver activa una entrada breve por paso y se limpia al desmontar. El contenido es visible por defecto cuando no hay observador; reduced motion desactiva todas las entradas y el trazado de la línea.
+
+Verificación:
+- Build, pruebas de leads, narrativa conservada y catálogo de mascotas: correctos, ocho pruebas. `git diff --check` correcto.
+- Playwright: tres pasos presentes a 1440, 768 y 390 px en ambos temas, sin overflow horizontal ni errores JavaScript. Alturas de sección: 763, 770 y 1305 px respectivamente; la altura móvil incluye los tres pasos apilados.
+- Scroll con movimiento normal: los tres pasos recibieron la clase de entrada al verse; reduced motion devolvió `animationName: none`.
+- Capturas revisadas en `output/playwright/method-{light,dark}-{1440,768,390}.png`. La cabecera sticky se ocultó únicamente durante las capturas del componente.
+
+Límites: no se realizaron auditorías de contraste, lector de pantalla o rendimiento ni se repitió el formulario con API simulada. El flujo de contacto y la narrativa reservada no se modificaron.
+
+### Retoques de legibilidad del método
+
+Se ampliaron las etiquetas de los pasos (10 px en escritorio, 8 en tablet y 9 en móvil), se aumentó el trazo SVG de 1,6 a 2 px y se aclararon sus líneas secundarias. Se acercaron los gráficos a la línea numerada y se retiró el texto redundante de la derecha del cierre. Build y `git diff --check` correctos. Playwright revisó etiquetas y gráficos a 1440, 768 y 390 px, sin overflow horizontal; el nodo del texto retirado ya no existe. Capturas en `output/playwright/method-refined-{ancho}.png`. No se repitieron las pruebas funcionales para este cambio de presentación.
+
+### Tres ilustraciones de la mascota para el método
+
+Se generaron tres imágenes con fondo transparente de la mascota SAYRI para Entendemos, Simplificamos y Conectamos. Representan escucha y notas; transformación de un enredo en tres bloques ordenados; y un núcleo que conecta productos, equipo e indicadores. Se usó image_gen integrado con la mascota base como referencia, una llamada por imagen. Los PNG originales, WebP, prompts completos y procedencia están guardados en `src/img/mascot/method/`.
+
+Las imágenes sustituyen los tres gráficos SVG dentro de `WorkingMethod`, conservando el icono de cierre y la línea numerada. Altura visual: 240 px en escritorio, 195 en tablet y 200 en móvil, con object-fit contain. Todas mantienen 1254 × 1254 px y transparencia. Las versiones web suman 1.168.848 bytes, se cargan mediante loading="lazy" y reservan dimensiones para mantener estable el contenido. No se añadieron dependencias.
+
+Verificación: build, pruebas de leads, narrativa y catálogo de mascotas correctos (ocho pruebas), y `git diff --check` correcto. Playwright decodificó las tres imágenes con ancho natural de 1254 px a 1440, 768 y 390 px en ambos temas, sin overflow horizontal ni errores JavaScript. Se revisaron las capturas de la sección en `output/playwright/method-mascots-{light,dark}-{1440,768,390}.png`. La cabecera sticky se ocultó únicamente para los recortes. No se repitieron la animación de entrada ni el formulario con API simulada; no se modificaron esas funciones.
