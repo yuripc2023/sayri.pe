@@ -297,3 +297,29 @@ Build correcto. Playwright verificó ambos temas a 1440, 768 y 390 px sin overfl
 Se retiró de Home la sección «Todo se conecta cuando hace falta». Contenido conservado para reutilización: Comercial (Clientes, Ventas, Pedidos, CRM); Operaciones (Compras, Productos, Inventarios); Finanzas (Caja, Facturación, Cuentas por cobrar); Gestión (Usuarios, Permisos, Configuración); Inteligencia (Reportes, Dashboards, Analítica).
 
 El ancla #plataforma ahora pertenece a PlatformOverview. Su enlace interno Explorar la plataforma apunta a #platform-modules, el panel interactivo, para evitar un enlace a sí mismo. OrderJourney continúa directamente con Operación móvil. Verificación: build de producción y diff check.
+
+
+### Presentación de SAYRI móvil
+
+Se reemplazó el teléfono esquemático por MobileOperation, con nuevo texto, Clientes/Pedidos/Stock y CTA a #contacto. Mascota y teléfono generados mediante imagegen integrado; PNG original y WebP en src/img/mascot/mobile, prompt completo en generation.json. Composición SVG con AppHome.jpeg original en la pantalla; clips conservan tentáculos y notch por delante. La captura muestra acceso por RUC, no una pantalla operativa. Flotación CSS de seis segundos con movimiento reducido sin animación.
+
+Build y ocho pruebas existentes correctos; diff check correcto. Playwright: ambos temas a 1440, 768 y 390 px sin overflow, CTA #contacto y animationName none bajo reduced motion. Capturas mobile-operation-{dark,light}-{1440,768,390}.png y mobile-operation-final-{1440,390}.png en output/playwright. Revisión visual de escritorio y móvil; no auditoría de lector de pantalla ni rendimiento ni repetición del formulario con API simulada.
+
+
+### Retiro de cinco secciones de Home
+
+Por solicitud se retiraron la gráfica de información por área, SAYRI AI, el listado de ecosistema por sector, el caso LOPESA y el CTA final azul. Se limpiaron imports sin uso, enlaces Sayri AI/Casos de cabecera y pie; Sectores ahora apunta al hangar mediante #sectores. Se conserva el formulario de contacto y los CTA restantes. Build y diff check correctos; comprobación de código de las cinco ausencias y referencias de navegación. No se repitió validación visual en esta eliminación.
+
+
+### Ecosistema de ocho tecnologías
+
+TechnologyEcosystem sustituye el listado de herramientas. Nueva mascota frontal con ocho puntas visibles, generada con imagegen integrado; se corrigieron las primeras versiones de seis brazos. Original y WebP alpha en src/img/mascot/technology; prompts/procedencia en generation.json. WebP: 512.73 kB en build. Emblemas HTML independientes para AWS, PostgreSQL, Python, Django, React, React Native, Git y CI/CD. SVG de cinco marcas desde Simple Icons; origen documentado en src/img/technology/README.md. AWS es marca tipográfica con sonrisa; CI/CD es un ciclo propio. No se añadieron dependencias.
+
+Botones nativos con selección aria-pressed, detalle aria-live, flechas e Inicio/Fin. Flotación independiente en escritorio; móvil presenta la mascota arriba y ocho controles en dos columnas, con foco y desplazamiento al detalle al seleccionar. Reduced motion desactiva flotación y suavizado.
+
+Validación: build, ocho pruebas existentes y diff check correctos. Playwright comprobó las ocho selecciones, Inicio AWS y Fin CI/CD, ambos temas a 1440, 768 y 390 px sin overflow horizontal. Foco móvil en technology-detail y animationName none con reduced motion confirmados. Capturas technology-{dark,light}-{1440,768,390}.png en output/playwright; revisión visual de escritorio y tablet oscuros. No se realizaron auditorías de lector de pantalla, marcas o rendimiento.
+
+
+### Corrección anatómica de la mascota tecnológica
+
+La versión inicial tenía dos extremos laterales inferiores sin unión al cuerpo; la revisión anterior no detectó el defecto. Se corrigió con imagegen para añadir segmentos articulados continuos hasta el cuerpo, conservando ocho puntas y la pose frontal. Nuevo original sources/nucleo-v2.png y WebP nucleo-v2.webp; anterior conservado. Prompt en repair-v2.json. Alpha verificado y build/diff check correctos. Playwright confirmó el nuevo asset a 1440, 768 y 390 px sin overflow; capturas technology-repair-{1440,768,390}.png en output/playwright. Revisión visual de la imagen generada y escena de escritorio. Sin cambios en lógica de selección ni nueva auditoría de accesibilidad.

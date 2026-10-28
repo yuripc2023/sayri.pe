@@ -50,7 +50,7 @@ export function SectorHangar() {
     }
   }
 
-  return <section className={`sector-hangar ${paused ? 'hangar-paused' : ''}`} style={{ '--suit-color': armor.color, '--visible-count': visibleCount, '--center-slot': centerSlot } as CSSProperties} aria-labelledby="hangar-title">
+  return <section id="sectores" className={`sector-hangar ${paused ? 'hangar-paused' : ''}`} style={{ '--suit-color': armor.color, '--visible-count': visibleCount, '--center-slot': centerSlot } as CSSProperties} aria-labelledby="hangar-title">
     <div className="hangar-top"><span><i/> SAYRI / SISTEMAS ESPECIALIZADOS</span><button type="button" onClick={() => setPaused(value => !value)} aria-pressed={paused}>{paused ? 'Activar movimiento' : 'Pausar movimiento'} <span aria-hidden="true">{paused ? '▷' : 'Ⅱ'}</span></button></div>
     <div className="hangar-introduction">
       <div className="hangar-copy"><p className="hangar-kicker">UN MISMO NÚCLEO. MÚLTIPLES PERSONALIDADES.</p><h1 id="hangar-title">Cada negocio tiene su <em>poder.</em></h1></div>

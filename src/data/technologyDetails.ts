@@ -1,0 +1,58 @@
+export const technologyDetails: Record<string, { overview: string; application: string; benefits: string[]; scenario: string; source: string }> = {
+  AWS: {
+    overview: 'Amazon Web Services es una plataforma de servicios en la nube. Ofrece recursos de cómputo, almacenamiento y redes que se pueden combinar según las necesidades de una aplicación.',
+    application: 'Aporta la infraestructura sobre la que se alojan los servicios de SAYRI. Su configuración se adapta a los recursos que requiere cada entorno y a la evolución de la operación.',
+    benefits: ['Recursos para alojar servicios y archivos', 'Opciones para ajustar la capacidad de infraestructura', 'Separación y configuración de entornos'],
+    scenario: 'Cuando crece el uso de la plataforma, el equipo puede evaluar y ajustar los recursos de infraestructura que la sostienen.',
+    source: 'https://aws.amazon.com/what-is-aws/',
+  },
+  PostgreSQL: {
+    overview: 'Es un sistema de base de datos de código abierto que utiliza SQL. Permite almacenar datos relacionados y definir reglas para mantener su integridad.',
+    application: 'Es la base para relacionar la información empresarial: clientes, productos, pedidos y otros registros que los procesos necesitan consultar y actualizar.',
+    benefits: ['Relaciones entre registros del negocio', 'Transacciones para agrupar cambios de datos', 'Consultas que alimentan reportes e indicadores'],
+    scenario: 'Un pedido puede vincularse con su cliente y sus productos para consultar el detalle de la operación sin mantener listas aisladas.',
+    source: 'https://www.postgresql.org/about/',
+  },
+  Python: {
+    overview: 'Es un lenguaje de programación de propósito general. Su ecosistema permite desarrollar servicios, procesar información y automatizar tareas.',
+    application: 'Permite expresar la lógica del negocio: validar datos, realizar cálculos y definir cómo debe continuar un proceso según las condiciones de la operación.',
+    benefits: ['Reglas y validaciones de los procesos', 'Cálculos y transformación de información', 'Automatización de tareas definidas'],
+    scenario: 'Al registrar una operación, la lógica puede revisar los datos recibidos y calcular los importes que corresponden a sus condiciones.',
+    source: 'https://www.python.org/about/',
+  },
+  Django: {
+    overview: 'Es un framework web de código abierto construido con Python. Proporciona una estructura para desarrollar aplicaciones y herramientas para trabajar con datos y usuarios.',
+    application: 'Organiza los servicios del backend que reciben solicitudes de las aplicaciones, ejecutan las reglas del negocio y acceden a la información.',
+    benefits: ['Estructura para servicios y módulos', 'Herramientas para autenticación y permisos', 'Modelos para trabajar con la base de datos'],
+    scenario: 'Una solicitud desde la web puede pasar por validaciones y permisos antes de consultar o modificar un registro del negocio.',
+    source: 'https://www.djangoproject.com/start/overview/',
+  },
+  React: {
+    overview: 'Es una biblioteca para construir interfaces mediante componentes reutilizables. Cada componente representa una parte de la pantalla y responde a los datos y las acciones del usuario.',
+    application: 'Da forma a la experiencia web de SAYRI: formularios, listados y vistas con las que las personas consultan información y realizan su trabajo.',
+    benefits: ['Componentes reutilizables entre pantallas', 'Interfaces que responden a las acciones', 'Organización visual de datos y formularios'],
+    scenario: 'Al elegir un cliente o cambiar un filtro, la pantalla puede actualizar la información mostrada sin recargar toda la página.',
+    source: 'https://react.dev/',
+  },
+  'React Native': {
+    overview: 'Es una tecnología para crear aplicaciones móviles con React y componentes de interfaz nativos. Permite compartir parte de la lógica de desarrollo entre plataformas móviles.',
+    application: 'Acerca capacidades de SAYRI al celular para acompañar procesos como la consulta de clientes y el registro de pedidos donde trabaja el equipo.',
+    benefits: ['Interfaces adaptadas al uso móvil', 'Componentes de la plataforma del dispositivo', 'Reutilización de lógica en el desarrollo'],
+    scenario: 'Durante una visita, un vendedor puede utilizar las capacidades disponibles en la aplicación móvil para registrar información de su atención.',
+    source: 'https://reactnative.dev/',
+  },
+  Git: {
+    overview: 'Es un sistema distribuido de control de versiones. Conserva el historial de cambios del código y permite desarrollar líneas de trabajo mediante ramas.',
+    application: 'Ayuda al equipo de SAYRI a coordinar cambios, comparar versiones y conservar el contexto de la evolución del software.',
+    benefits: ['Historial de cambios del código', 'Ramas para desarrollar mejoras', 'Comparación y combinación de versiones'],
+    scenario: 'Una mejora puede desarrollarse en una rama y revisarse antes de incorporarla al código compartido con el equipo.',
+    source: 'https://git-scm.com/about',
+  },
+  'CI/CD': {
+    overview: 'Es un conjunto de prácticas de integración continua y entrega o despliegue continuos. Conecta cambios de código con pasos repetibles de construcción, verificación y publicación.',
+    application: 'Ordena el recorrido de una actualización desde el desarrollo hasta su publicación. Las verificaciones y aprobaciones dependen del flujo configurado por el equipo.',
+    benefits: ['Construcción repetible de la aplicación', 'Ejecución de verificaciones configuradas', 'Pasos definidos para publicar actualizaciones'],
+    scenario: 'Antes de publicar una versión, un flujo puede construir la aplicación y ejecutar pruebas; el equipo decide qué controles y aprobaciones incorpora.',
+    source: 'https://docs.github.com/en/actions/get-started/understand-github-actions',
+  },
+}
