@@ -1,4 +1,4 @@
-import { useState, type KeyboardEvent } from 'react'
+import { useRef, useState, type KeyboardEvent } from 'react'
 import mascot from '../../img/mascot/growth/construimos.webp'
 import './growth.css'
 
@@ -15,7 +15,19 @@ const points = [{x:250,y:180}, {x:95,y:85}, {x:250,y:38}, {x:405,y:85}, {x:405,y
 
 export function ProgressiveGrowth() {
   const [selected, setSelected] = useState(0)
+  const detail = useRef<HTMLDivElement>(null)
   const level = levels[selected]
+  const chooseLevel = (index: number) => {
+    setSelected(index)
+    if (window.matchMedia('(max-width: 650px)').matches) {
+      requestAnimationFrame(() => {
+        const element = detail.current
+        if (!element) return
+        element.focus({ preventScroll: true })
+        element.scrollIntoView({ block: 'start', behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' })
+      })
+    }
+  }
   const navigate = (event: KeyboardEvent<HTMLOListElement>) => {
     let next: number
     if (event.key === 'ArrowRight' || event.key === 'ArrowDown') next = (selected + 1) % levels.length
@@ -30,10 +42,11 @@ export function ProgressiveGrowth() {
 
   return <section className="progressive-growth" id="procesos" aria-labelledby="growth-title">
     <header className="growth-heading"><p className="eyebrow">CRECIMIENTO PROGRESIVO</p><h2 id="growth-title">Empieza con un proceso.<br/><em>Crece a tu ritmo.</em></h2><p>Resuelve una necesidad de hoy y conecta nuevas áreas cuando tu operación lo requiera.</p></header>
-    <p className="growth-instruction">Explora las posibilidades. Puedes comenzar donde lo necesites.</p>
-    <ol className="growth-levels" aria-label="Niveles de crecimiento de SAYRI" onKeyDown={navigate}>{levels.map((item,index) => <li key={item.id}><button type="button" className={index<=selected ? 'growth-reached' : ''} aria-pressed={selected===index} aria-controls="growth-detail" onClick={() => setSelected(index)}><span className="growth-index">{String(index+1).padStart(2,'0')}</span><span className="growth-level-name">{item.name}</span><span className="growth-level-indicator" aria-hidden="true">{selected===index ? '↗' : '+'}</span></button></li>)}</ol>
-    <div className="growth-detail" id="growth-detail">
-      <div className="growth-detail-copy" key={level.id} aria-live="polite" aria-atomic="true"><span className="growth-current">{String(selected+1).padStart(2,'0')} / {level.name}</span><h3>{level.title}</h3><p>{level.description}</p><div className="growth-example"><span>UN MISMO EJEMPLO QUE CRECE</span><strong>{level.example}</strong><ul>{level.tags.map(tag=><li key={tag}>{tag}</li>)}</ul></div></div>
+    <p className="growth-instruction">Elige un nivel para ver cómo puede ayudarte SAYRI.</p>
+    <ol className="growth-levels" aria-label="Niveles de crecimiento de SAYRI" onKeyDown={navigate}>{levels.map((item,index) => <li key={item.id}><button type="button" aria-pressed={selected===index} aria-controls="growth-detail" onClick={() => chooseLevel(index)}><span className="growth-card-heading"><span className="growth-index">{String(index+1).padStart(2,'0')}</span><span className="growth-level-name">{item.name}</span></span><span className="growth-card-preview">{item.example}</span><span className="growth-card-action">{selected===index ? 'Explorando' : 'Ver ejemplo'}<span aria-hidden="true">{selected===index ? '✓' : '→'}</span></span></button></li>)}</ol>
+    <div className="growth-detail" id="growth-detail" ref={detail} tabIndex={-1} aria-labelledby="growth-detail-title">
+      <div className="growth-detail-column"><div className="growth-detail-copy" key={level.id} aria-live="polite" aria-atomic="true"><span className="growth-current">{String(selected+1).padStart(2,'0')} / {level.name}</span><h3 id="growth-detail-title">{level.title}</h3><p>{level.description}</p><div className="growth-example"><span>UN MISMO EJEMPLO QUE CRECE</span><strong>{level.example}</strong><ul>{level.tags.map(tag=><li key={tag}>{tag}</li>)}</ul></div></div>
+      <div className="growth-detail-nav" role="group" aria-label="Recorrer los niveles"><button type="button" disabled={selected===0} onClick={() => setSelected(index => Math.max(0,index-1))}><span aria-hidden="true">←</span> Anterior</button><span>{String(selected+1).padStart(2,'0')} / 07</span><button type="button" disabled={selected===levels.length-1} onClick={() => setSelected(index => Math.min(levels.length-1,index+1))}>Siguiente nivel <span aria-hidden="true">→</span></button></div></div>
       <div className="growth-visual"><div className="growth-network"><svg viewBox="0 0 500 360" fill="none" aria-hidden="true"><ellipse className="growth-network-orbit" cx="250" cy="180" rx="167" ry="145"/>{points.slice(1).map((point,index)=><path key={index} className={`growth-wire ${index+1<=selected ? 'wire-reached' : ''}`} d={`M250 180L${point.x} ${point.y}`}/>)}{points.map((point,index)=><g key={index} className={`growth-network-node ${index<=selected ? 'node-reached' : ''}`}><circle cx={point.x} cy={point.y} r={index===0 ? 43 : 21}/><text x={point.x} y={point.y+(index===0 ? 5 : 4)} textAnchor="middle">{index===0 ? 'SAYRI' : String(index+1).padStart(2,'0')}</text></g>)}</svg><span className="growth-network-caption">Un núcleo que suma conexiones.</span></div><img className="growth-mascot" src={mascot} alt="" width="1254" height="1254" loading="lazy" decoding="async"/></div>
     </div>
     <div className="growth-footer"><p>No necesitas implementarlo todo a la vez.</p><a href="#contacto">¿Por dónde necesita empezar tu empresa? <span aria-hidden="true">↗</span></a></div>

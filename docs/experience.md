@@ -264,3 +264,9 @@ Verificación:
 - Capturas revisadas: `output/playwright/growth-{light,dark}-{1440,768,390}.png`; cabecera sticky oculta solo durante los recortes.
 
 Límites: los nodos son una representación conceptual, no un conteo de módulos contratados o desplegados. No se realizaron auditorías de contraste, rendimiento o lector de pantalla; no se repitió el formulario con API simulada. La mascota no cambia de pose por nivel ni tiene articulación animada; es un render nuevo y diferente de los anteriores.
+
+### Interacción explícita de los niveles
+
+Los siete niveles ahora son tarjetas completas con un ejemplo y la acción «Ver ejemplo →». La tarjeta activa muestra «Explorando ✓»; se reforzaron bordes, contraste y estados hover/foco. Se añadieron controles Anterior y Siguiente nivel, con límites deshabilitados. En móvil, la selección solicita foco y desplazamiento al detalle; reduced motion evita el desplazamiento animado.
+
+Verificación: `pnpm build`, ocho pruebas existentes y `git diff --check` correctos. Playwright confirmó selección de Proceso a 1440, 768 y 390 px sin overflow horizontal, avance a Capacidad y regreso a Proceso. Capturas disponibles en `output/playwright/growth-cards-{light,dark}-{1440,768,390}.png`; se revisaron visualmente las capturas oscuras de escritorio y móvil. No se realizó una auditoría con lector de pantalla.
