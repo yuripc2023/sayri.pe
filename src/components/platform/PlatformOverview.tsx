@@ -27,15 +27,15 @@ export function PlatformOverview() {
     event.currentTarget.querySelectorAll<HTMLButtonElement>('button')[next]?.focus()
   }
 
-  return <section className="platform-overview" aria-labelledby="experience-cta-title">
+  return <section id="plataforma" className="platform-overview" aria-labelledby="experience-cta-title">
     <div className="platform-layout">
       <div className="platform-copy"><p className="eyebrow">SAYRI · TU EMPRESA CONECTADA</p>
         <h2 id="experience-cta-title">Tu operación conectada.<br/><em>Tu empresa bajo control.</em></h2>
         <p className="platform-description">Conecta ventas, inventarios, operaciones y finanzas. Empieza por lo que necesitas y amplía SAYRI al ritmo de tu empresa.</p>
         <div className="platform-promise"><span aria-hidden="true">+</span><p>Un proceso hoy.<br/><strong>Más posibilidades para lo que viene.</strong></p></div>
-        <div className="platform-actions"><ScheduleDemoButton /><a className="text-link" href="#plataforma">Explorar la plataforma <span aria-hidden="true">↓</span></a></div>
+        <div className="platform-actions"><ScheduleDemoButton /><a className="text-link" href="#platform-modules">Explorar la plataforma <span aria-hidden="true">↓</span></a></div>
       </div>
-      <div className="platform-visual">
+      <div id="platform-modules" className="platform-visual">
         <div className="platform-visual-top"><span>UN NÚCLEO. TODA TU OPERACIÓN.</span><span><i/> CONECTADOS</span></div>
         <div className="platform-diagram" role="group" aria-label="Explora los módulos de SAYRI" onKeyDown={navigate}>
           <svg className="platform-connections" viewBox="0 0 500 440" aria-hidden="true">

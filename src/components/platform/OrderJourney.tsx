@@ -70,7 +70,7 @@ export function OrderJourney() {
       </div>
       <div className="journey-guide" aria-hidden="true"><div className="journey-orbit"><span>20</span><small>UNIDADES</small></div><img key={stage.name} src={stage.mascot} alt="" title={stage.pose} width="1254" height="1254" loading="lazy" decoding="async" /><p>Un mismo pedido.<br />Información que acompaña a tu equipo.</p></div>
     </div>
-    <footer className="journey-footer"><p>La información avanza. <strong>Tu equipo también.</strong></p><a href="#contacto">Ver cómo aplicarlo a mi negocio <span aria-hidden="true">↗</span></a></footer>
+    <div className="journey-closing"><div className="journey-closing-copy"><span className="journey-closing-label">EL SIGUIENTE PASO ES TUYO</span><p>La información avanza.<br /><strong>Tu equipo también.</strong></p><span className="journey-closing-description">Conectemos este recorrido con la forma de trabajar de tu empresa.</span></div><a className="journey-closing-link" href="#contacto">Aplicarlo a mi negocio <span aria-hidden="true">↗</span></a></div>
     <p className="journey-note">Recorrido ilustrativo: las etapas se adaptan a los procesos de cada empresa.</p>
   </section>
 }

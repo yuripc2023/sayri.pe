@@ -283,3 +283,17 @@ Verificación: build y ocho pruebas existentes correctos; `git diff --check` sin
 Se generaron ocho renders con imagegen integrado: Cliente, Pedido, Stock, Procesamiento, Facturación, Cobranza, Analítica y Decisión, cada uno con distinta postura y accesorios. Originales PNG y WebP de 1254 × 1254 con alpha verificado en `src/img/mascot/journey/`; prompts y procedencia en `generation.json`. WebP: 356–439 KiB por imagen. La misma selección del detalle controla la imagen al usar tarjetas, Anterior/Siguiente y teclado. Entrada CSS de 280 ms, desactivada con reduced motion; relación de aspecto fija para reservar espacio. Imágenes decorativas con alt vacío.
 
 Validación: build, ocho pruebas existentes y diff check correctos. Playwright en localhost:5180 confirmó ocho URLs distintas con decodificación correcta; Anterior cambió a Analítica, Siguiente a Decisión e Inicio a Cliente. A 1440, 768 y 390 px no hubo overflow y reduced motion devolvió animationName none. Capturas `output/playwright/journey-mascot-{1440,768,390}.png`; revisión visual del escritorio claro y de los ocho renders originales. No se realizó auditoría de rendimiento o lector de pantalla.
+
+
+### Cierre del recorrido
+
+Se sustituyó el footer interno por un contenedor con estilos propios para evitar heredar padding y fondo del pie de página general. Mensaje con jerarquía, texto de apoyo y CTA sólido «Aplicarlo a mi negocio» hacia #contacto. Móvil: disposición vertical y botón de ancho completo; foco visible y reduced motion. Se eliminaron estilos obsoletos del footer anterior.
+
+Build correcto. Playwright verificó ambos temas a 1440, 768 y 390 px sin overflow y destino #contacto preservado. Botón de 211 px en escritorio/tablet y 292 px en móvil, altura mínima observada de 55 px. Capturas journey-closing-{dark,light}-{1440,768,390}.png en output/playwright; revisión visual de escritorio y móvil oscuros. No se repitieron pruebas de formulario ni auditoría de accesibilidad.
+
+
+### Capacidades reservadas para páginas por rubro
+
+Se retiró de Home la sección «Todo se conecta cuando hace falta». Contenido conservado para reutilización: Comercial (Clientes, Ventas, Pedidos, CRM); Operaciones (Compras, Productos, Inventarios); Finanzas (Caja, Facturación, Cuentas por cobrar); Gestión (Usuarios, Permisos, Configuración); Inteligencia (Reportes, Dashboards, Analítica).
+
+El ancla #plataforma ahora pertenece a PlatformOverview. Su enlace interno Explorar la plataforma apunta a #platform-modules, el panel interactivo, para evitar un enlace a sí mismo. OrderJourney continúa directamente con Operación móvil. Verificación: build de producción y diff check.
