@@ -36,7 +36,7 @@ section.sayri-experience.sayri-experience{--story-bg:#081824;--story-ink:#f3f7fb
 
 body:has(.sayri-experience[data-visible="true"]) .whatsapp{bottom:110px}
 
-.experience-cta{background:var(--paper)}.experience-cta h2{max-width:950px}.experience-cta .actions{flex-wrap:wrap}#despues-de-la-historia{scroll-margin-top:78px}main section[id]{scroll-margin-top:95px}@media(max-width:680px){#despues-de-la-historia{scroll-margin-top:64px}main section[id]{scroll-margin-top:80px}}
+
 
 /* Fit the global navigation on laptops after adding direct contact access. */
 @media(min-width:681px) and (max-width:1200px){.header nav{gap:13px}.header nav .nav-cta{display:none}.header-right{gap:18px}}

@@ -92,6 +92,6 @@ export function SectorHangar() {
     <p className="sr-only" aria-live="polite" aria-atomic="true">{armor.label}: {armor.description}</p>
     <div className="hangar-demo"><p>Tu próximo paso empieza con una conversación.</p><ScheduleDemoButton /></div>
     <div className="hangar-selector" role="group" aria-label="Selecciona la especialidad de tu rubro">{armors.map((item, index) => <button key={item.slug} type="button" aria-pressed={selected === index} onClick={() => setSelected(index)} style={{ '--item-color': item.color } as CSSProperties}><span className="selector-number">{String(index + 1).padStart(2, '0')}</span><span>{item.label}</span><i aria-hidden="true"/></button>)}</div>
-    <div className="hangar-bottom"><span>{armors.length} ESPECIALIDADES. UN ECOSISTEMA EN EVOLUCIÓN.</span><a href="#historia-sayri">Descubre cómo se conecta todo ↓</a></div>
+    <div className="hangar-bottom"><span>{armors.length} ESPECIALIDADES. UN ECOSISTEMA EN EVOLUCIÓN.</span><a href="#despues-de-la-historia">Conoce la plataforma ↓</a></div>
   </section>
 }
