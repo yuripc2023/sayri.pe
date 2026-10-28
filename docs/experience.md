@@ -62,3 +62,126 @@ R3F 9.7.0 instancia THREE.Clock, deprecado por Three 0.186.0: Chrome muestra ese
 No se realizó una auditoría Lighthouse, prueba en hardware móvil físico ni validación de CORS del backend mediante POST real. La web sigue siendo SPA; HTML semántico tras render React, sin SSR/prerender. El canonical existente del sitio no se rediseñó como parte de esta experiencia.
 
 Capturas y snapshots en output/playwright/: phase-b-*, phase-c-*, phase-d-sayri-clean.png, company-390.png, reading-mobile.png y production-*.png. Los archivos de configuración reduced.json y no-webgl.json permiten repetir esos modos con el skill oficial Playwright.
+
+## Hero: hangar de sectores (27 de octubre de 2026)
+
+Se añadió un hangar antes de la narrativa existente. Presenta 13 armaduras SVG originales, con tres familias de silueta, emblemas, colores y nombres propios. El selector es un grupo de botones nativos con `aria-pressed`; la descripción se anuncia con `aria-live`. Las flechas recorren el catálogo de forma circular y el enlace Explorar abre la ruta de la solución seleccionada. Las páginas de esos 13 sectores incluyen su identidad, áreas de gestión y el CTA existente de demo. Se preserva Encomiendas en el catálogo anterior y se agrega Planta de producción.
+
+Las identidades se mantienen en `src/data/armors.ts`; cada slug debe existir también en `src/data/solutions.ts`. No se agregaron dependencias ni imágenes externas. La flotación usa transformaciones CSS, permite pausa manual y se desactiva con reduced motion. No requiere WebGL; la narrativa posterior conserva su fallback anterior. Las armaduras son ilustraciones vectoriales estilizadas, no modelos 3D ni renders fotorrealistas.
+
+Verificación realizada:
+- `pnpm build`, `node tests/leads.test.mjs`, `node tests/experience.test.mjs` y `node tests/hangar.test.mjs`: correctos (7 pruebas en total).
+- Playwright: selección y navegación de los 13 rubros, vuelta al inicio y un h1 en cada destino; controles de pausa; scroll hacia abajo y vuelta al Hero; cambio a tema oscuro.
+- Capturas a 390, 768 y 1440 px en `output/playwright/hangar-{ancho}.png`. Medición final sin overflow horizontal en los tres tamaños. Padding superior final: 18 px en móvil y 26 px en tablet/escritorio.
+- Reduced motion: `animationName` de la armadura igual a `none`.
+- Consola: advertencias de `THREE.Clock` obsoleto y del controlador WebGL en la narrativa preexistente; mensajes de liberación del contexto al navegar. No se realizó auditoría de rendimiento, contraste ni lectores de pantalla.
+
+Limitaciones: estas páginas son presentaciones iniciales dentro de la SPA, no dominios externos independientes. Las áreas descritas son puntos de conversación para la demo; no se afirma disponibilidad de módulos concretos. El formulario no se volvió a probar visualmente con API simulada en esta intervención; sí pasó su regresión automatizada sin crear leads. No se repitieron todos los escenarios de pérdida de contexto de la narrativa anterior.
+
+## Actualización: pulpo tecnológico como mascota
+
+La versión de armaduras descrita arriba fue sustituida a petición del usuario por un pulpo inspirado en su referencia. `SectorMascot.tsx` reemplaza `ArmorFigure.tsx` tanto en el Hero como en las páginas de solución. Una sola mascota grande presenta el rubro elegido mediante una insignia con emblema propio, color ambiental y nombre. La apariencia blanca/dorada y los ojos azules se conservan entre especialidades. Se retiraron las tres vitrinas y el lenguaje de armaduras del Hero.
+
+Asset generado con la herramienta integrada image_gen y referencia del usuario, no descargado. Archivos y prompt completo en `src/img/mascot/README.md`. La web sirve WebP con alpha de unos 422 kB, conservando el PNG original solo como fuente. No se añadieron dependencias. Es un render rasterizado que flota con CSS; no incluye articulación de tentáculos, rotación 3D real ni vestimentas distintas por rubro.
+
+Verificación de esta actualización:
+- Build y las siete pruebas existentes correctos; `git diff --check` correcto.
+- Playwright: imagen cargada (1254 px de ancho natural), 13 selecciones y navegación a cada destino con mascota y un h1; retorno al inicio.
+- Flechas siguiente/anterior: Comercial → Distribución → Comercial. Selección con Enter: Planta de producción.
+- Pausa: `animationPlayState: paused`. Reduced motion: `animationName: none`, también tras recarga.
+- 390, 768 y 1440 px: sin overflow horizontal una vez estabilizado el resize. Hubo una medición transitoria de overflow al redimensionar la narrativa GSAP preexistente; la medición posterior estable fue correcta sin cambios adicionales de CSS para ocultarlo.
+- Tema claro y oscuro revisados; capturas en `output/playwright/octopus-{ancho}.png` y `output/playwright/octopus-dark.png`.
+- Consola del recorrido: sin errores; advertencias preexistentes de Three.js/WebGL. No se repitió el formulario con API simulada, la pérdida de contexto WebGL ni una auditoría de accesibilidad o rendimiento.
+
+## Actualización: trece pulpos con personalidad por rubro
+
+Se generaron **13 renders independientes** a partir de la mascota base, uno por cada rubro del Hero. La versión actual sustituye el uso de una única imagen para todos los sectores descrito en el apartado anterior. El vestuario, accesorios y gesto diferencian ahora a cada personaje; se conservan el material blanco/dorado y los ojos azules para mantener una familia visual coherente.
+
+El catálogo `src/data/sectorMascots.ts` relaciona slug, imagen y personalidad. `SectorMascot` lo utiliza tanto en el selector como en las páginas de solución. La base anterior queda disponible como fallback para futuras entradas sin render. Todos los actuales tienen imagen propia: una nueva prueba verifica correspondencia de las 13 entradas, archivos WebP válidos y hashes de contenido distintos.
+
+Los originales PNG y sus WebP optimizados se guardaron en `src/img/mascot/sectors/`. El README de esa carpeta contiene la descripción de las trece personalidades; `prompts.json` conserva los prompts completos y `provenance.json` la correspondencia con los originales generados. Se usó image_gen integrado, sin nuevas dependencias ni descargas externas. Peso individual WebP: 384–570 kB; colección de aproximadamente 5,6 MiB. La carga inicial observada solicitó **una sola imagen** de la colección, no las trece.
+
+Verificación realizada en esta actualización:
+- `pnpm build`, `node tests/leads.test.mjs`, `node tests/experience.test.mjs`, `node tests/hangar.test.mjs`: correctos, ocho pruebas en total. `git diff --check` correcto.
+- Playwright: selección de las 13 imágenes con decodificación correcta, 13 fuentes distintas y navegación a las 13 páginas, comprobando que cada destino mantiene el render elegido.
+- Revisión visual de la colección en `output/playwright/pulpos-rubros.png` y capturas del Hero `personality-01.png` a `personality-13.png`.
+- 390, 768 y 1440 px: sin overflow horizontal tras estabilizar el resize. Capturas `personalities-{ancho}.png`.
+- Teclado: Enter selecciona Restaurantes. Pausa: `animationPlayState: paused`. Reduced motion: `animationName: none` en la transición de imagen. Cambio de tema capturado en `personalities-theme.png`.
+- WebGL deshabilitado mediante simulación del navegador: narrativa en `data-quality: fallback`, mascota visible y selección de Agroindustria correcta.
+- Sin errores JavaScript en el recorrido. Consola con las advertencias preexistentes de Three.js/WebGL; la primera apertura de la galería de QA produjo un 404 de favicon, corregido con favicon vacío en ese HTML de pruebas.
+
+Límites: no se realizó auditoría de rendimiento o contraste, no se probaron lectores de pantalla y no se repitió la prueba visual del formulario con API simulada; la regresión automatizada del cliente de leads pasó. El movimiento sigue siendo flotación del render completo; no se generaron animaciones articuladas por personaje.
+
+## Actualización: slider de vitrinas inspirado en un hangar
+
+El Hero ahora presenta simultáneamente los pulpos en vitrinas iluminadas sobre plataformas, con el seleccionado más grande, brillante y adelantado. La galería ocupa todo el ancho; el texto introductorio queda encima y la ficha/CTA del seleccionado debajo. Se conserva el acceso directo por rubro y las páginas existentes.
+
+Responsive: **4 vitrinas desde 1100 px y 3 por debajo**, incluidas tablet y móvil. La posición seleccionada es la segunda vitrina; en móvil queda centrada y en escritorio queda entre un vecino anterior y dos siguientes. Las flechas recorren circularmente los 13 rubros sin duplicar botones ni IDs. No hay rotación automática ni captura de rueda. La transición horizontal usa transformaciones CSS de 550 ms; la flotación se puede pausar. Reduced motion desactiva tanto flotación como transiciones.
+
+Interacción: click en una vitrina, flechas anterior/siguiente, teclas izquierda/derecha/Inicio/Fin con foco en el carrusel, arrastre con mouse y deslizamiento táctil. `touch-action: pan-y` mantiene el desplazamiento vertical nativo. El gesto horizontal requiere más de 40 px y predominio sobre el eje vertical; se suprime el click posterior para evitar una segunda selección. Las vitrinas externas quedan fuera del árbol accesible y de la interacción. Solo la seleccionada entra en la secuencia de Tab; las teclas mueven también el foco al personaje nuevo.
+
+La carga deja de ser de una sola imagen: se montan los 3/4 renders visibles y un vecino adicional a cada extremo (5/6 imágenes cercanas), asignando prioridad alta a la seleccionada y baja al resto. No se montan las trece imágenes a la vez ni se añadieron dependencias.
+
+Verificación realizada:
+- Build, regresión de leads, invariantes de experiencia y catálogo de mascotas: correctos, ocho pruebas. `git diff --check` correcto.
+- Playwright: 1440 px → 4 visibles; 768 y 390 px → 3. Sin overflow horizontal en los tres tamaños. Borde responsive verificado: 1099 px → 3, 1100 px → 4.
+- Las flechas recorrieron 13 selecciones distintas: vuelta a Comercial tras completar el catálogo y salto anterior de Comercial a Cochera.
+- Teclado: Inicio → Comercial; Fin → Cochera; derecha desde Cochera → Comercial. Click en la vitrina vecina → Distribución.
+- Arrastre real con mouse → Droguería; gesto táctil mediante eventos CDP → Ferretería. Repetición táctil tras ajuste de identificación del puntero → Droguería, con enlace verificado a «Gestión para droguerías».
+- Transición normal medida: 0,55 s. Pausa: `animationPlayState: paused`. Reduced motion: transición 0 s y animación `none`.
+- Cambio a tema oscuro capturado. WebGL simulado como no disponible: narrativa en fallback y slider operativo con 3 vitrinas, seleccionando Distribución.
+- Sin errores JavaScript en el recorrido. Continúan las advertencias preexistentes de Three.js/WebGL.
+- Capturas: `output/playwright/slider-1440.png`, `slider-768.png`, `slider-390.png` y `slider-dark.png`.
+
+Límites: gestos probados en Chromium con mouse y entrada táctil simulada, no en un teléfono físico. No se realizó auditoría con lector de pantalla, de rendimiento ni contraste; no se repitió el formulario con API simulada porque no se modificó.
+
+### Ajuste a cinco pulpos en escritorio
+
+Por solicitud del usuario, desde 1100 px se muestran **5 vitrinas**, con el pulpo seleccionado en la tercera posición y dos vecinos a cada lado. Por debajo se mantienen 3, también con el seleccionado centrado. El cálculo de visibilidad y precarga ahora es simétrico: se montan 7 retratos cercanos en escritorio y 5 en tablet/móvil.
+
+Verificación: `pnpm build` y `git diff --check` correctos. Playwright confirmó 5 visibles a 1440 y 1100 px, y 3 a 1099, 768 y 390 px; seleccionado centrado (desviación menor a 1 px) y sin overflow horizontal en los cinco anchos. Navegación circular comprobada: Comercial → anterior → Cochera → siguiente → Comercial. Capturas en `output/playwright/slider-five-{1440,768,390}.png`. No se repitieron las pruebas de formulario, gestos, temas ni fallback de la intervención anterior.
+
+### Trece posturas individuales para los pulpos
+
+Se regeneraron los 13 personajes a partir de su render por rubro para cambiar realmente la postura del cuerpo y los tentáculos. Las nuevas composiciones van desde el ofrecimiento hacia delante de Comercial hasta la postura recogida de Droguería, el cuidado de la planta en Agroindustria, la mirada elevada de Educación y la presentación frontal del conductor. Se conservan los materiales, vestuario y accesorios por sector. La diferencia está dibujada en cada render; no se obtiene girando la misma imagen mediante CSS.
+
+La versión activa está en `src/img/mascot/sectors/poses-v2/`, con originales PNG, WebP de producción, prompts completos y procedencia. Se usó image_gen integrado para 13 ediciones independientes. Las imágenes anteriores se conservan sin sobrescribirlas. El catálogo `src/data/sectorMascots.ts` apunta a las nuevas rutas en el Hero y en las páginas de solución. Los 13 WebP suman 4.852.270 bytes y pesan entre 259.668 y 447.774 bytes cada uno.
+
+Verificación de esta intervención:
+- Build, cliente de leads, invariantes de narrativa y catálogo de mascotas: correctos, ocho pruebas. `git diff --check` correcto.
+- Playwright recorrió las 13 selecciones, decodificó 13 fuentes distintas dentro de `poses-v2/` y verificó que los 13 destinos conservan la misma imagen seleccionada.
+- 1440 px: 5 personajes visibles. 768 y 390 px: 3. Sin overflow horizontal en los tres tamaños; sin errores JavaScript en el recorrido.
+- Revisión visual de la colección en `output/playwright/pulpos-posturas.png`, con capturas del Hero en `poses-slider-{1440,768,390}.png` y `poses-slider-variety.png`.
+- La primera captura del Hero tras volver desde las páginas conservaba el scroll de retorno; se repitió desde el inicio para mostrar los personajes completos. El servidor anterior no estaba disponible y se reinició la vista previa local para completar la revisión.
+
+Límites: son nuevas poses estáticas con la flotación CSS existente; no se generaron animaciones articuladas. La revisión se hizo en Chromium con reduced motion para comparar las imágenes sin movimiento. No se repitieron las pruebas de gestos, cambio de tema, pérdida de contexto WebGL, lector de pantalla ni formulario con API simulada, porque no se modificaron esas funciones.
+
+### Cápsulas de exhibición: acabado de vidrio y metal
+
+Se sustituyó el marco plano por una cápsula cilíndrica: corona superior metálica con superficie elíptica y luz inferior, vidrio con reflejos diagonales suaves, guías laterales y pedestal de varias capas con aro luminoso e indicadores. La seleccionada utiliza el color de su rubro. Los elementos son decorativos (`aria-hidden`) y se implementan en `src/components/hangar/capsules.css` sin nuevas imágenes, dependencias, Canvas ni filtros de desenfoque.
+
+La imagen deja más espacio bajo la tapa y sobre el pedestal; se conservan las poses, la navegación y los cinco/tres personajes visibles. Verificación: `pnpm build` y `git diff --check` correctos. Playwright confirmó 5 visibles a 1440 px y 3 a 768 y 390 px, sin overflow horizontal; flecha siguiente cambió Comercial a Distribución. Capturas revisadas en `output/playwright/capsules-{1440,768,390}.png` y detalle en `capsule-detail.png`. No se añadieron ni repitieron pruebas automatizadas para este ajuste visual; no se repitieron formulario, gestos ni auditorías de contraste o rendimiento.
+
+### Etiquetas por rubro
+
+Las cápsulas muestran el nombre del rubro en la tapa en lugar de S01/S02. Se retiraron los alias como Impulso y Vector del catálogo activo, del pie del personaje, de su ficha y de las páginas de solución. Se adaptó la tipografía para etiquetas largas. Build, dos pruebas del catálogo y `git diff --check` correctos. Playwright revisó «Colegios profesionales» a 1440, 768 y 390 px sin overflow horizontal; no quedan nodos de alias ni de números de cápsula. Capturas en `output/playwright/sector-labels-{ancho}.png`. No se repitieron gestos ni formulario para este ajuste de nombres.
+
+### Descripción y enlace propios bajo cada cápsula
+
+Cada personaje ahora tiene una tarjeta con título del rubro, descripción breve y enlace «Explorar [rubro]». En escritorio/tablet la descripción y el botón aparecen al lado; en móvil se apilan para mantener legibilidad y un botón de al menos 44 px. Se reemplazó la ficha global del seleccionado por estas fichas individuales, dejando una solicitud de demo común debajo de la galería y un anuncio accesible del rubro seleccionado.
+
+Las tarjetas son artículos: el botón de selección de cápsula y el enlace de navegación son hermanos, sin enlaces dentro de botones. Se mantienen 5/3 personajes, navegación del slider y las páginas por rubro. Verificación: build y `git diff --check` correctos. Playwright comprobó las 13 descripciones y enlaces «Explorar» con navegación a los 13 destinos; 5 visibles a 1440 px y 3 a 768 y 390 px, sin overflow horizontal, enlaces anidados ni errores JavaScript. Capturas `output/playwright/capsule-cards-{1440,768,390}.png`. No se repitieron formulario ni gestos táctiles en esta intervención.
+
+### Módulos con símbolo + debajo de cada descripción
+
+Se recuperaron los tres módulos de `capabilities` para cada rubro y se muestran en una lista semántica bajo su descripción, con el símbolo + en el color del sector. Cada lista conserva su enlace Explorar al lado en escritorio/tablet y debajo en móvil. Se amplió el área de texto sin cambiar el tamaño de las cápsulas. Build y `git diff --check` correctos. Playwright comprobó tres módulos en cada uno de los 13 rubros y revisó encaje de las tarjetas y overflow horizontal a 1440, 768 y 390 px. Capturas en `output/playwright/sector-modules-{ancho}.png`. No se repitieron formulario ni gestos para este ajuste de contenido.
+
+### Selección inicial aleatoria
+
+El Hero elige al montar un índice aleatorio entre los rubros disponibles, en lugar de iniciar siempre en Comercial. Se calcula una sola vez mediante el inicializador de estado; los cambios de pausa o tamaño de pantalla no vuelven a sortear la selección. Al recargar o regresar al inicio tras desmontarse el Hero, se realiza una nueva elección. Una selección aleatoria puede repetir el rubro anterior. Build y `git diff --check` correctos; no se repitió la validación visual para este cambio puntual.
+
+### Flechas laterales junto a los pulpos
+
+Se trasladaron los controles anterior/siguiente desde debajo de las tarjetas a ambos costados de las cápsulas, centrados a la altura de los personajes. Usan cheurones SVG, foco visible y un área de interacción mínima de 44 × 44 px. El contador permanece debajo. Se reservan márgenes adaptables para que las flechas estén dentro de pantalla sin cubrir los personajes. Entre 1100 y 1279 px las tarjetas apilan descripción y botón para evitar recortes con los cinco personajes.
+
+Build y `git diff --check` correctos. Playwright verificó dos flechas dentro del viewport, navegación siguiente/anterior y ausencia de overflow horizontal a 1920, 1440, 1100, 768 y 390 px. Tras detectar texto demasiado alto a 1100 px, se ajustó esa franja y se comprobó el encaje de los 13 rubros. Capturas en `output/playwright/side-arrows-{1440,768,390}.png`. No se repitieron las pruebas de gestos ni formulario para este cambio de posición de controles.

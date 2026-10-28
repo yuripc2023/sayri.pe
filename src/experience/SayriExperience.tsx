@@ -43,8 +43,8 @@ export function SayriExperience() {
     return () => { visibility.disconnect(); element?.removeEventListener('sayri-story-error', fail); model.invalidate = () => {} }
   }, [fail, model])
 
-  return <section ref={root} className={`sayri-experience ${animated ? 'is-animated' : 'is-reading'}`} data-quality={capability.quality} data-chapter="0" aria-labelledby="experience-title">
-    <h1 id="experience-title" className="sr-only">Sayri. Diseña, construye y controla tu empresa desde un solo lugar.</h1>
+  return <section id="historia-sayri" ref={root} className={`sayri-experience ${animated ? 'is-animated' : 'is-reading'}`} data-quality={capability.quality} data-chapter="0" aria-labelledby="experience-title">
+    <h2 id="experience-title" className="sr-only">Sayri. Diseña, construye y controla tu empresa desde un solo lugar.</h2>
     <div className="story-topline flex items-center justify-between gap-4">
       <span>SAYRI <span className="story-topline-divider">/</span> LA EMPRESA, DESDE SU ORIGEN</span>
       <div className="flex items-center gap-4">

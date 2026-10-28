@@ -1,0 +1,79 @@
+/* Cylindrical display chambers: metal end caps, glass shell and an illuminated plinth. */
+.hangar-slot .slot-frame{
+  --chamber-light:#87aebe;
+  border:0;background:none;border-radius:0;isolation:isolate;
+  inset:17px 13px 85px;
+}
+.hangar-slot.is-selected .slot-frame{--chamber-light:var(--bay-color);border:0;background:none}
+.slot-glass{position:absolute;inset:12px 0 0;border-radius:45% 45% 23% 23% / 10% 10% 6% 6%;border:1px solid #c1e1ec36;background:linear-gradient(90deg,#b5e1f017,transparent 10%,transparent 82%,#b5e1f013 96%,#c1e1ec25),radial-gradient(ellipse at 50% 0%,#bfeaff0a,transparent 70%);box-shadow:inset 8px 0 12px -12px #d0efff,inset -8px 0 12px -12px #d0efff}
+.slot-glass:before{content:'';position:absolute;inset:15px 8px 8px;border-radius:inherit;background:linear-gradient(106deg,transparent 12%,#d2efff0b 13%,#d2efff04 24%,transparent 25%,transparent 72%,#e7f8ff09 73%,transparent 79%);pointer-events:none}
+.slot-glass:after{content:'';position:absolute;left:5%;right:5%;bottom:1%;height:22%;border-radius:50%;background:radial-gradient(ellipse,color-mix(in srgb,var(--chamber-light) 12%,transparent),transparent 70%)}
+.slot-crown{position:absolute;z-index:4;top:-2px;left:-4px;right:-4px;height:35px;border-radius:50% / 25%;border:1px solid #bfdce251;background:linear-gradient(100deg,#0b1822 0%,#344c59 12%,#142c3a 25%,#48616c 45%,#203b48 65%,#0b1d29 87%,#43616d);box-shadow:0 5px 8px #0005,inset 0 -4px 5px #040f19a6}
+.slot-crown:before{content:'';position:absolute;top:-5px;left:-1px;right:-1px;height:19px;border-radius:50%;border:1px solid #b5d6e65e;background:linear-gradient(170deg,#5c7887,#203a49 46%,#0b1d2b 50%,#315262);box-shadow:inset 0 2px 2px #e0f6ff24}
+.slot-crown:after{content:'';position:absolute;bottom:2px;left:6%;right:6%;height:8px;border-radius:50%;border-bottom:2px solid color-mix(in srgb,var(--chamber-light) 64%,#1a3445);box-shadow:0 4px 8px color-mix(in srgb,var(--chamber-light) 12%,transparent)}
+.slot-crown-inset{position:absolute;z-index:1;top:-1px;left:17%;right:17%;height:9px;border-radius:50%;border:1px solid #a8cbd535;background:linear-gradient(180deg,#081824,#345364);box-shadow:inset 0 2px 4px #0008}
+.hangar-slot .slot-label{z-index:5;top:14px;left:10px;right:10px;font-size:10px;line-height:1.1;letter-spacing:.02em;text-align:center;color:#bed0da;text-shadow:0 1px 2px #000}
+.hangar-slot.is-selected .slot-label{color:#fff0d9}
+.hangar-slot .slot-light{z-index:1;inset:29px 3px 12px;border-width:1px;border-color:#9ec9d34d;box-shadow:none;border-radius:3px;background:linear-gradient(90deg,#caf5ff0b,transparent 8%,transparent 92%,#caf5ff0b)}
+.hangar-slot.is-selected .slot-light{border-color:color-mix(in srgb,var(--bay-color) 72%,#d8f2ff);box-shadow:-4px 0 12px -8px var(--bay-color),4px 0 12px -8px var(--bay-color);background:linear-gradient(90deg,color-mix(in srgb,var(--bay-color) 12%,transparent),transparent 12%,transparent 88%,color-mix(in srgb,var(--bay-color) 12%,transparent))}
+.hangar-slot .slot-visual{z-index:2;inset:32px -3% 13px}
+.hangar-slot .slot-platform{z-index:4;bottom:-17px;left:-5px;right:-5px;height:35px;border-radius:50% / 27%;border:1px solid #829fac60;background:linear-gradient(100deg,#0a1925,#405c6b 12%,#122c3b 24%,#203d4b 50%,#0a1e2c 82%,#425e6a);box-shadow:0 9px 13px #0008,inset 0 -5px 5px #03111c}
+.slot-platform:before{content:'';position:absolute;left:-1px;right:-1px;top:-9px;height:25px;border-radius:50%;border:1px solid #9fc8d666;background:radial-gradient(ellipse,#192f3d 0 37%,#53707b 39%,#142d3c 42% 55%,#7295a04f 57%,#183240 60%,#071a28 78%);box-shadow:inset 0 2px 4px #cee9ff17}
+.slot-platform:after{content:'';position:absolute;top:-5px;left:8%;right:8%;height:17px;border-radius:50%;border:1px solid color-mix(in srgb,var(--chamber-light) 55%,#254354);box-shadow:0 0 10px color-mix(in srgb,var(--chamber-light) 10%,transparent),inset 0 0 8px color-mix(in srgb,var(--chamber-light) 12%,transparent)}
+.hangar-slot.is-selected .slot-platform{border-color:color-mix(in srgb,var(--bay-color) 44%,#405a67);box-shadow:0 9px 13px #0008,0 8px 20px -12px var(--bay-color),inset 0 -5px 5px #03111c}
+.is-selected .slot-platform:after{border-color:var(--bay-color);box-shadow:0 0 12px color-mix(in srgb,var(--bay-color) 35%,transparent),inset 0 0 10px color-mix(in srgb,var(--bay-color) 20%,transparent)}
+.slot-base-indicators{position:absolute;z-index:1;bottom:7px;left:0;right:0;display:flex;justify-content:center;gap:5px}.slot-base-indicators i{width:3px;height:2px;border-radius:1px;background:#72919f}.is-selected .slot-base-indicators i{background:var(--bay-color);box-shadow:0 0 5px var(--bay-color)}
+@media(max-width:650px){
+  .hangar-slot .slot-frame{inset:17px 6px 88px}
+  .slot-crown{height:22px;left:-2px;right:-2px;top:0}.slot-crown:before{top:-3px;height:12px}.slot-crown:after{height:5px;bottom:1px;border-bottom-width:1px}.slot-crown-inset{height:5px;top:0}
+  .hangar-slot .slot-label{top:9px;left:6px;right:6px;font-size:6px;line-height:1.05;letter-spacing:0}
+  .slot-glass{inset:8px 0 0}.slot-glass:before{inset:10px 4px 5px}
+  .hangar-slot .slot-light{inset:20px 1px 8px}.hangar-slot .slot-visual{inset:24px -20% 9px}
+  .hangar-slot .slot-platform{bottom:-12px;height:23px;left:-2px;right:-2px}.slot-platform:before{top:-6px;height:16px}.slot-platform:after{top:-4px;height:12px}.slot-base-indicators{bottom:4px;gap:3px}.slot-base-indicators i{width:2px;height:1px}
+}
+
+/* Each capsule owns its description and destination; links are siblings of selection buttons. */
+.hangar-track{height:480px}
+.hangar-slot .slot-frame{bottom:200px}
+.slot-pick{position:absolute;inset:0;width:100%;height:100%;border:0;background:none;padding:0;color:inherit;cursor:pointer;outline-offset:-4px!important}
+.hangar-slot .slot-caption{z-index:5;top:314px;bottom:8px;left:12px;right:12px;display:block;text-align:left;cursor:default}
+.slot-caption h3{font-size:14px;line-height:1.25;font-weight:650;margin:0 0 12px;color:#e7f2f8;min-height:35px;display:flex;align-items:center}
+.slot-summary{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:start;gap:10px}
+.slot-summary p{font-size:11px;line-height:1.6;color:#a9bfce;margin:0;text-wrap:pretty}
+.slot-explore{display:flex;align-items:center;justify-content:space-between;gap:8px;max-width:100px;min-height:44px;padding:10px 9px;border:1px solid color-mix(in srgb,var(--bay-color) 45%,#294251);background:color-mix(in srgb,var(--bay-color) 7%,#0a1b28);border-radius:4px;color:#e7f3fa;font-size:10px;line-height:1.4;font-weight:600;transition:background .2s,color .2s}
+.slot-explore:hover,.slot-explore:focus-visible{background:var(--bay-color);color:#07121c}.is-selected .slot-explore{background:var(--bay-color);color:#07121c;border-color:var(--bay-color)}.is-selected .slot-caption h3{color:var(--bay-color)}
+.hangar-demo{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:18px 0;border-top:1px solid #ffffff20}.hangar-demo p{font-size:13px;color:#acc1ce;margin:0}.hangar-demo .button{font-size:11px}
+@media(min-width:1600px){.hangar-track{height:520px}.hangar-slot .slot-caption{top:354px}}
+@media(min-width:651px) and (max-width:1099px){.hangar-track{height:465px}.hangar-slot .slot-caption{top:299px}}
+@media(max-width:650px){
+  .hangar-track{height:390px}.hangar-slot .slot-frame{bottom:231px}
+  .hangar-slot .slot-caption{top:182px;left:7px;right:7px;bottom:4px;padding-top:6px;min-height:0;text-align:center}
+  .slot-caption h3{font-size:10px;line-height:1.3;min-height:28px;justify-content:center;margin:0 0 10px}
+  .slot-summary{display:flex;flex-direction:column;gap:10px;align-items:stretch}
+  .slot-summary p{font-size:9px;line-height:1.5;min-height:68px}
+  .slot-explore{font-size:9px;max-width:none;min-height:44px;padding:8px 6px;gap:3px;text-align:left}
+  .hangar-demo{flex-direction:column;align-items:flex-start;gap:12px}.hangar-demo p{font-size:12px}
+}
+/* Keep the hangar floor under the pedestals when card copy increases the track height. */
+.hangar-slider:before{bottom:157px}
+@media(max-width:650px){.hangar-slider:before{bottom:185px}}
+
+/* Module lists remain attached to each sector's own description. */
+.hangar-track{height:552px}.hangar-slot .slot-frame{bottom:272px}.hangar-slider:before{bottom:229px}
+.slot-copy{min-width:0}.slot-modules{list-style:none;margin:12px 0 0;padding:0;display:flex;flex-direction:column;gap:6px;text-align:left}
+.slot-modules li{display:flex;align-items:baseline;gap:5px;font-size:10px;line-height:1.4;color:#bdd0dc}.slot-modules li>span{color:var(--bay-color);font-weight:700;flex-shrink:0}
+@media(min-width:1600px){.hangar-track{height:592px}}
+@media(min-width:651px) and (max-width:1099px){.hangar-track{height:537px}}
+@media(max-width:650px){.hangar-track{height:480px}.hangar-slot .slot-frame{bottom:321px}.hangar-slider:before{bottom:275px}.slot-modules{margin-top:10px;gap:6px}.slot-modules li{font-size:8px;line-height:1.4;gap:4px}.slot-summary .slot-copy p{min-height:68px}}
+
+/* Navigation sits beside the characters, where the gallery can be explored immediately. */
+.hangar-carousel{--capsule-mid:150px;position:relative;padding-inline:44px}
+.hangar-side-arrow{position:absolute;top:var(--capsule-mid);z-index:8;width:44px;height:52px;display:grid;place-items:center;padding:10px;border:1px solid #87b6ce73;border-radius:12px;color:#d8f2ff;background:#102737;box-shadow:0 4px 14px #0005;cursor:pointer;transform:translateY(-50%);transition:background .2s,border-color .2s,color .2s}
+.hangar-side-arrow svg{width:22px;height:26px;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;pointer-events:none}
+.arrow-previous{left:-4px}.arrow-next{right:-4px}
+.hangar-side-arrow:hover,.hangar-side-arrow:focus-visible{background:var(--suit-color);color:#07121c;border-color:var(--suit-color)}
+@media(min-width:1440px){.hangar-carousel{padding-inline:0}.arrow-previous{left:-52px}.arrow-next{right:-52px}}
+@media(min-width:1600px){.hangar-carousel{--capsule-mid:170px}}
+@media(min-width:651px) and (max-width:1099px){.hangar-carousel{--capsule-mid:142px}}
+@media(max-width:650px){.hangar-carousel{--capsule-mid:90px;padding-inline:24px}.hangar-carousel .hangar-slider{margin-inline:0}.hangar-side-arrow{height:44px;padding:12px;border-radius:50%}.arrow-previous{left:-12px}.arrow-next{right:-12px}.hangar-side-arrow svg{width:18px;height:20px}.slot-summary{gap:8px}}
+@media(min-width:1100px) and (max-width:1279px){.slot-summary{grid-template-columns:1fr;gap:10px}.slot-summary p{font-size:10px;line-height:1.45}.slot-modules{margin-top:9px;gap:4px}.slot-modules li{font-size:9px;line-height:1.35}.slot-explore{max-width:none}.slot-caption h3{margin-bottom:8px}}

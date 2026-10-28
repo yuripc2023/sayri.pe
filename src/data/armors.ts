@@ -1,0 +1,20 @@
+export type Armor = {
+  slug: string; label: string; color: string; form: 'agile' | 'heavy' | 'precise'
+  emblem: string; description: string; capabilities: [string, string, string]
+}
+// El orden y la identidad del hangar se amplían agregando una entrada.
+export const armors: Armor[] = [
+  { slug:'comercial', label:'Comercial', color:'#ff985f', form:'agile', emblem:'M-12 9V-2H-4V9M-1 9V-9H7V9M10 9V-16H18V9', description:'Convierte cada oportunidad en el siguiente paso de tu negocio.', capabilities:['Clientes y CRM','Ventas y pedidos','Caja y facturación'] },
+  { slug:'distribucion-logistica', label:'Distribución', color:'#53b8ff', form:'heavy', emblem:'M-17-8H5V8H-17ZM5-2H13L19 5V8H5M-11 8V13M12 8V13', description:'Conecta el almacén, tu equipo en campo y cada entrega.', capabilities:['Inventarios','Pedidos en campo','Rutas y entregas'] },
+  { slug:'droguerias', label:'Droguería', color:'#4de0ce', form:'precise', emblem:'M-5-16H5V-5H16V5H5V16H-5V5H-16V-5H-5Z', description:'Precisión y trazabilidad para una operación que exige cuidado.', capabilities:['Lotes y vencimientos','Trazabilidad','Control de stock'] },
+  { slug:'ferreterias', label:'Ferretería', color:'#ffc553', form:'heavy', emblem:'M-13 14L5-4M3-6L2-15L10-18L8-10L14-6L20-10L17 0L8 2L-10 20Z', description:'Una estructura firme para gestionar miles de productos.', capabilities:['Catálogo y unidades','Compras e inventario','Ventas y cotizaciones'] },
+  { slug:'odontologia', label:'Odontología', color:'#97ddff', form:'precise', emblem:'M0-12C-22-25-18 8-10 18C-5 25-6 4 0 4C6 4 5 25 10 18C18 8 22-25 0-12Z', description:'Cada atención conectada, desde la primera cita.', capabilities:['Agenda de citas','Historias clínicas','Planes de tratamiento'] },
+  { slug:'agroindustria', label:'Agroindustria', color:'#a7e379', form:'heavy', emblem:'M-14 14C-22-9-4-18 17-17C18 5 6 20-14 14ZM-14 14L8-8', description:'Visibilidad de tu operación, del origen al producto.', capabilities:['Campañas y lotes','Insumos e inventarios','Costos de operación'] },
+  { slug:'colegios-profesionales', label:'Colegios profesionales', color:'#bdabff', form:'precise', emblem:'M-18-7L0-18L18-7ZM-13-3V12M0-3V12M13-3V12M-19 17H19', description:'Una comunidad profesional con una gestión conectada.', capabilities:['Colegiados','Cuotas y pagos','Trámites y servicios'] },
+  { slug:'educacion', label:'Educación', color:'#ffe18b', form:'agile', emblem:'M0-9C-7-15-14-15-20-12V13C-12 10-6 11 0 16C6 11 12 10 20 13V-12C14-15 7-15 0-9ZM0-9V16', description:'Más conexión entre la institución, docentes y estudiantes.', capabilities:['Matrículas','Gestión académica','Pensiones y pagos'] },
+  { slug:'estudios-juridicos', label:'Estudio jurídico', color:'#c4cae1', form:'precise', emblem:'M0-18V19M-16-9H16M-13-9L-21 7H-5ZM13-9L5 7H21ZM-10 19H10', description:'Orden y seguimiento para cada caso y cada compromiso.', capabilities:['Expedientes','Agenda y plazos','Clientes y honorarios'] },
+  { slug:'planta-de-produccion', label:'Planta de producción', color:'#ffb471', form:'heavy', emblem:'M-19 17V-5L-5 2V-8L8-1V-18H17V17ZM-12 10H-8M-1 10H3M10 10H14', description:'Sincroniza materiales, procesos y resultados en tu planta.', capabilities:['Órdenes de producción','Materiales e insumos','Costos y trazabilidad'] },
+  { slug:'restaurantes', label:'Restaurantes', color:'#ff7e8b', form:'agile', emblem:'M-14-18V-5Q-7 3 0-5V-18M-7-18V20M17 20V-18Q5-10 10 4H17', description:'El ritmo de tu servicio, conectado de la mesa a la caja.', capabilities:['Mesas y pedidos','Cocina y atención','Caja e insumos'] },
+  { slug:'transporte-pasajeros', label:'Transporte', color:'#67d8e9', form:'agile', emblem:'M-16 12V-13Q0-20 16-13V12ZM-16 0H16M-9 12V18M9 12V18M-9 6H-6M6 6H9', description:'Coordina viajes, pasajeros y operaciones en movimiento.', capabilities:['Rutas y horarios','Venta de pasajes','Control de viajes'] },
+  { slug:'cocheras', label:'Cochera', color:'#8ccbb3', form:'heavy', emblem:'M-9 20V-18H4C22-18 22 4 4 4H-9M-9-9H3Q13-9 3-5H-9', description:'Control claro en cada ingreso y cada salida.', capabilities:['Ingresos y salidas','Tarifas y tiempos','Caja y abonados'] },
+]

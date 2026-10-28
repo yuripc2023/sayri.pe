@@ -1,0 +1,106 @@
+[
+  {
+    "slug": "comercial",
+    "source": "/home/yuri/.codex/generated_images/01a17f16-491e-7643-a7c9-57e3f5204733/exec-d19d9b99-99bd-4799-95ba-8f50c4916ea0.png",
+    "original": "sources/comercial.png",
+    "web": "comercial.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  {
+    "slug": "distribucion-logistica",
+    "source": "/home/yuri/.codex/generated_images/01a17f16-491e-7643-a7c9-57e3f5204733/exec-260732b8-d2c6-4776-a881-4c49fb656127.png",
+    "original": "sources/distribucion-logistica.png",
+    "web": "distribucion-logistica.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  {
+    "slug": "droguerias",
+    "source": "/home/yuri/.codex/generated_images/01a17f16-491e-7643-a7c9-57e3f5204733/exec-1251059a-fb9b-4907-87ab-2cfae5ca8d2e.png",
+    "original": "sources/droguerias.png",
+    "web": "droguerias.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  {
+    "slug": "ferreterias",
+    "source": "/home/yuri/.codex/generated_images/01a17f16-491e-7643-a7c9-57e3f5204733/exec-90f8e23f-7f3f-4736-ba89-1e0a3e75f95f.png",
+    "original": "sources/ferreterias.png",
+    "web": "ferreterias.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  {
+    "slug": "odontologia",
+    "source": "/home/yuri/.codex/generated_images/01a17f16-491e-7643-a7c9-57e3f5204733/exec-33b793d1-8b21-464e-9aad-631e8672a271.png",
+    "original": "sources/odontologia.png",
+    "web": "odontologia.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  {
+    "slug": "agroindustria",
+    "source": "/home/yuri/.codex/generated_images/01a17f16-491e-7643-a7c9-57e3f5204733/exec-ede7d5ef-c826-4e6f-9095-6354821922f8.png",
+    "original": "sources/agroindustria.png",
+    "web": "agroindustria.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  {
+    "slug": "colegios-profesionales",
+    "source": "/home/yuri/.codex/generated_images/01a17f16-491e-7643-a7c9-57e3f5204733/exec-227f87f9-f879-4791-8081-c275354735a9.png",
+    "original": "sources/colegios-profesionales.png",
+    "web": "colegios-profesionales.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  {
+    "slug": "educacion",
+    "source": "/home/yuri/.codex/generated_images/01a17f16-491e-7643-a7c9-57e3f5204733/exec-d4621e1f-fcbf-4e68-9744-cf897ccfee83.png",
+    "original": "sources/educacion.png",
+    "web": "educacion.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  {
+    "slug": "estudios-juridicos",
+    "source": "/home/yuri/.codex/generated_images/01a17f16-491e-7643-a7c9-57e3f5204733/exec-5449ed13-f71d-4c29-ade5-760c02b044c1.png",
+    "original": "sources/estudios-juridicos.png",
+    "web": "estudios-juridicos.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  {
+    "slug": "planta-de-produccion",
+    "source": "/home/yuri/.codex/generated_images/01a17f16-491e-7643-a7c9-57e3f5204733/exec-9a07fd61-2254-4a77-b036-a2ebf2b35346.png",
+    "original": "sources/planta-de-produccion.png",
+    "web": "planta-de-produccion.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  {
+    "slug": "restaurantes",
+    "source": "/home/yuri/.codex/generated_images/01a17f16-491e-7643-a7c9-57e3f5204733/exec-2f7dfdd5-f487-4cf2-9950-b92516d57ca8.png",
+    "original": "sources/restaurantes.png",
+    "web": "restaurantes.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  {
+    "slug": "transporte-pasajeros",
+    "source": "/home/yuri/.codex/generated_images/01a17f16-491e-7643-a7c9-57e3f5204733/exec-3218910c-6197-42e7-b246-88461f49a79d.png",
+    "original": "sources/transporte-pasajeros.png",
+    "web": "transporte-pasajeros.webp",
+    "width": 1254,
+    "height": 1254
+  },
+  {
+    "slug": "cocheras",
+    "source": "/home/yuri/.codex/generated_images/01a17f16-491e-7643-a7c9-57e3f5204733/exec-9e26ba71-b490-4d7d-a987-a9c87e10fff2.png",
+    "original": "sources/cocheras.png",
+    "web": "cocheras.webp",
+    "width": 1254,
+    "height": 1254
+  }
+]

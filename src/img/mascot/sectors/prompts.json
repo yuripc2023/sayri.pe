@@ -1,0 +1,60 @@
+{
+  "tool": "image_gen (built-in)",
+  "reference": "../sayri-octopus.png",
+  "transparent_background": true,
+  "basePrompt": "Use case: stylized-concept. Asset: one transparent-background premium website mascot, full body square composition. Input reference: the attached image defines the SAME SAYRI octopus character, face, pearlescent white ceramic shell, polished champagne-gold mechanical joints and rings, blue glass lens eyes, navy circuitry, eight curling segmented tentacles. Preserve this recognizable character identity and high-end photorealistic 3D product-render material quality. Create ONE occupation-specific variant, not a sheet or collage. The special personality must be unmistakable through meaningful clothing, equipment and tentacle gesture, not merely a color change. Keep an octopus anatomy: no humanoid torso, hands, human feet or legs. Props are held by curled tentacles. Compose all body, hat and props within frame, no cropping, a centered compact readable silhouette, comparable scale to the reference, 7% transparent margin. Soft studio highlights with subtle cool rim light suitable for a navy website. Genuinely transparent background, no environment, floor, pedestal or ground shadow. No words, labels, numbers, letters, logos or watermark. ",
+  "sectors": [
+    {
+      "slug": "comercial",
+      "personality": "Energetic, persuasive and approachable sales consultant. A tailored short navy business vest neatly fitted around the upper octopus body, small copper-orange necktie, one tentacle presenting an open slim tablet with a simple orange rising bar chart (no text), a second holding a compact white payment terminal, another making a welcoming open curling gesture. Warm copper-orange accent details. Confident engaging pose, still cute."
+    },
+    {
+      "slug": "distribucion-logistica",
+      "personality": "Resourceful and dependable logistics coordinator. Cobalt-blue utility vest with reflective silver piping, a small communications headset carefully fitted around the round head, one tentacle securely cradling two small kraft parcels, another holding a handheld barcode scanner toward a parcel, other tentacles organized in a purposeful balanced carrying pose. Blue accents. No forklift, truck or scenery."
+    },
+    {
+      "slug": "droguerias",
+      "personality": "Meticulous and calm pharmaceutical warehouse specialist, not a doctor or dental worker. A pristine short white laboratory coat-like collar fitted to the octopus, teal safety glasses just above its characteristic blue eyes, one tentacle inspecting a small amber medicine vial with a plain blank white cap, another holding a neatly organized blister pack and a tiny blank stock card. Teal-green accents, controlled precise gestures, reassuring expression. No red cross, needles or stethoscope."
+    },
+    {
+      "slug": "ferreterias",
+      "personality": "Practical, strong and cheerful hardware expert. A golden-yellow safety hard hat fitted atop the rounded head and rugged short navy work apron with a few tool pockets fitted around the octopus upper body. One curled tentacle gripping a shiny adjustable wrench, another a small claw hammer, another presenting a rolled tape measure. Yellow safety accents and sturdy spread-out tentacle stance. No construction background."
+    },
+    {
+      "slug": "odontologia",
+      "personality": "Gentle, precise and reassuring dental specialist. A small pale icy-blue clinical cap on the rounded head, a lightweight clinical magnifying loupe band above the normal blue eyes without obscuring them, a neat white clinical collar. One tentacle holding a tiny round dental inspection mirror, another presenting a clean large white tooth demonstration model, another holding a slim dental probe angled away. Icy-blue accents. No syringe, mouth mask covering eyes, medicine boxes or red cross."
+    },
+    {
+      "slug": "agroindustria",
+      "personality": "Patient, earthy and observant agricultural specialist. A small straw field hat with navy band atop the round head and an olive-green practical field harness fitted around the octopus. One tentacle cradling a young vibrant green seedling in a compact soil plug, another holding a small soil sensor with a plain blank display, another carrying two ripe golden wheat ears. Leaf-green accents. Calm nurturing tentacle pose, no scenery or ground."
+    },
+    {
+      "slug": "colegios-profesionales",
+      "personality": "Distinguished, welcoming and community-minded professional association representative. A short deep-navy formal ceremonial shoulder cape tailored to the octopus upper body with a violet sash and elegant small gold medallion. One tentacle proudly presenting a rolled ivory professional certificate tied with violet ribbon, another holding a tasteful small round gold member badge with a simple abstract geometric relief and NO lettering, two tentacles making an inclusive open gesture. Violet accents. NOT a graduate: no mortarboard. NOT a lawyer: no gavel, legal scales or law books."
+    },
+    {
+      "slug": "educacion",
+      "personality": "Curious, enthusiastic and encouraging teacher-scholar. A dark navy academic mortarboard with a golden tassel on the rounded head, a light short scholarly cape, one tentacle holding a large open book with blank ivory pages, another holding a simple pencil, another raising a small glowing warm-gold lightbulb as a symbol of discovery. Warm golden-yellow accents. Playful inquisitive tentacle gestures. No certificate or legal props."
+    },
+    {
+      "slug": "estudios-juridicos",
+      "personality": "Composed, analytical and fair legal counselor. A tailored short charcoal-navy formal collar and a small silver-blue necktie fitted to the octopus, thin elegant gold spectacles framing but not hiding the blue lens eyes. One tentacle holding a small balanced polished gold justice scale, another supporting a closed thick navy law book with absolutely no title or lettering, another carefully holding a rolled blank legal document. Platinum-blue accents. Symmetric dignified pose. No mortarboard or ceremonial membership sash."
+    },
+    {
+      "slug": "planta-de-produccion",
+      "personality": "Methodical, powerful and inventive industrial production engineer. A white safety hard hat with amber stripe, transparent safety visor lifted above the familiar blue eyes, short dark navy industrial harness with orange safety edging. One tentacle inspecting a machined metal gear, another using a precision digital caliper on a small metal part, another holding a compact process-control tablet with only three simple abstract flow-node shapes. Amber-orange industrial accents. Robust deliberate tentacle posture. No hammer or plant scenery."
+    },
+    {
+      "slug": "restaurantes",
+      "personality": "Warm, creative and lively restaurant chef. A tall clean white chef toque on the rounded head, short burgundy chef neckerchief and white chef collar fitted around the octopus. One tentacle presenting a small elegant white plate with a beautifully plated colorful meal, another holding a stainless whisk, another holding a small polished saucepan. Coral-burgundy accents, joyful flowing tentacle gesture. No lettering, food background or dining table."
+    },
+    {
+      "slug": "transporte-pasajeros",
+      "personality": "Alert, reassuring and punctual passenger-transport driver. A neat navy professional driver cap with cyan piping and a short navy uniform collar, subtle cyan communications earpiece near the eye housing. Two front tentacles confidently holding a compact black steering wheel, a third presenting a plain small ticket with only two simple blue lines and no text, another holding a tiny stylized road-route navigation tablet. Cyan accents. Forward-facing attentive driving pose. No bus body, road or scenery."
+    },
+    {
+      "slug": "cocheras",
+      "personality": "Attentive, organized and helpful parking attendant. A small navy attendant cap with mint-green band and a short high-visibility mint-green vest fitted to the octopus, one tentacle holding a compact striped parking barrier arm miniature in raised position, another presenting a large polished gold car key with black fob, another holding a small blank parking ticket dispenser. Sage-mint accents. A clear friendly guiding tentacle gesture. No steering wheel, delivery parcels, car, parking lot, letters or P symbol."
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "tool": "image_gen (built-in)",
+  "transparent_background": true,
+  "basePrompt": "Use case: precise-object-edit / character reposing. Input image: edit target and exact character identity reference. Create a NEW fully reposed full-body image of this SAME occupation-specific SAYRI robotic octopus. Preserve its pearlescent white ceramic head and segmented tentacles, gold mechanisms, blue lens eyes, all occupation-specific clothes, colors and meaningful props visible in the reference. IMPORTANT: the reference pose is specifically rejected. Do not reproduce the familiar upright front-right catalogue stance with evenly splayed arms. This is a new articulated pose, not an image rotation, mirror, crop or perspective filter. Reconfigure the actual tentacles, body balance, head direction and placement of held props to achieve the detailed pose below, producing a strongly different readable silhouette. Keep octopus anatomy and believable tentacles gripping props, no human limbs, feet or hands. Match the reference's sophisticated realistic 3D product-render materials and lighting. Exactly one character, full body and all props fully inside a square canvas with at least 6% clear margin around every extremity. Centered visual mass, comparable overall size to reference, suitable for a website carousel. Genuinely transparent background, no floor, scene, platform, ground shadow, text, watermark or logo. No extra items, characters or panels. ",
+  "referencePattern": "../sources/{slug}.png",
+  "poses": [
+    {
+      "slug": "comercial",
+      "pose": "A lively diagonal forward pitch toward the viewer's LEFT, body inclined about 20 degrees, head turned LEFT making an engaging sideways glance. One long front tentacle extends toward bottom-left presenting the payment terminal to a customer; the sales tablet is held tilted inward beside the RIGHT cheek, distinctly lower than the top of the head. Two rear tentacles trail swept together to the RIGHT as a counterweight, two lower ones curl in opposing tight spirals. Dynamic sweeping S-shaped silhouette with an extended low left arm, not symmetric raised arms. Keep business vest and orange tie."
+    },
+    {
+      "slug": "distribucion-logistica",
+      "pose": "A busy side-on balancing/carrying action FACING LEFT with the round head leaning backward slightly under the load. Two tentacles cradle a stack of kraft parcels close against the FRONT-LEFT of the body at mid-height, a third tentacle curls OVER the top-left of the head to steady the upper parcel, while the scanner tentacle reaches horizontally RIGHT. Lower tentacles arranged as a compact stable tripod of loops rather than evenly splayed. Distinct top-left over-head loop and horizontal right extension. Keep blue reflective vest and headset."
+    },
+    {
+      "slug": "droguerias",
+      "pose": "An introspective compact upright FRONTAL pose, facing directly toward the viewer, head bowed slightly DOWN toward a small medicine vial held centered just under its eyes. Two front tentacles meet close together carefully examining the vial; a third folds across the belly holding the blister pack. Other tentacles gather tightly beneath the body in a rounded coiled nest, the medicine crate rests nestled at the bottom-right supported by a short loop. No arms stretched outward or above the head. A narrow, calm vertical silhouette. Keep teal goggles and white pharmaceutical collar."
+    },
+    {
+      "slug": "ferreterias",
+      "pose": "A LOW broad sturdy crouch, head/body leaning markedly to viewer's RIGHT, facing three-quarter LEFT. The hammer tentacle bends DOWN across the lower front, the wrench tentacle extends almost horizontally toward the LEFT at mid-body height, and the tape-measure tentacle pulls out a short ribbon across the lower front to the RIGHT. Four supporting tentacles spread in wide low flattened coils. Arms and tools mostly BELOW eye level, no raised victory tools. Powerful wide triangular silhouette, recognizable yellow hard hat and navy tool apron."
+    },
+    {
+      "slug": "odontologia",
+      "pose": "A delicate working pose, body turned nearly PROFILE toward the RIGHT, head inclining forward and DOWN as if carefully inspecting a patient. The tooth demonstration model is cradled close to the front-right of the face; a long tentacle arches above and around the tooth to angle a tiny dental mirror down toward it. The probe is held from below by a tightly bent lower tentacle. Two rear tentacles curl gracefully UP behind the body on the LEFT, the rest form a narrow low base. Distinct bowed neck and over-arching working arm. Keep icy-blue cap, clinical collar and magnifying loupes."
+    },
+    {
+      "slug": "agroindustria",
+      "pose": "A nurturing low seated-like octopus posture, body strongly bowed FORWARD to look DOWN at a young plant, facing three-quarter LEFT. Two large front tentacles create a wide shallow bowl in front of the belly cradling the seedling and soil plug. A third thin tentacle reaches gently toward a leaf. Soil sensor and wheat are kept low at opposite sides, not displayed high. Two rear tentacles curl vertically upward behind the LEFT shoulder like tall fern scrolls, while lower coils stay tucked under the body. Tender asymmetrical silhouette with open cupped front and upward rear curls. Keep straw hat and green field harness."
+    },
+    {
+      "slug": "colegios-profesionales",
+      "pose": "An elevated ceremonial welcoming pose, directly FRONTAL, head held tall and level. Two long outer tentacles sweep UP and OUT to form a broad open U shape around the head, the rolled violet-ribbon certificate held at upper LEFT and the round gold membership badge at upper RIGHT. Two middle tentacles extend forward palms-like, open spiral tips facing the viewer at chest height; the lower four tentacles hang in long elegant narrow downward curls rather than sitting in a squat nest. Tall stately symmetrical silhouette with open top. Keep navy/violet cape, sash and gold medallion."
+    },
+    {
+      "slug": "educacion",
+      "pose": "A curious sharply tilted looking-UP pose: head tipped about 25 degrees toward viewer's RIGHT and looking UP-LEFT at the warm lightbulb. One long tentacle extends nearly straight UP at upper LEFT holding that bulb ABOVE the mortarboard. The open book is supported low across the LOWER-RIGHT by two tentacles, with pencil held horizontally pointing toward its pages. Other tentacles curl in small playful mismatched spirals, one rear tentacle arcs behind the mortarboard. Distinct long left vertical reach with diagonally tilted head and low-right book. Preserve academic cap, tassel and cape."
+    },
+    {
+      "slug": "estudios-juridicos",
+      "pose": "A composed formal pose in three-quarter view FACING LEFT, head perfectly level, body slightly turned away from viewer. A tentacle holds the balanced justice scale suspended LOW at the LEFT side, below the face, rather than high in the air. Two tentacles neatly embrace the closed navy law book upright across the CENTER of the lower body; another tucks the rolled document alongside it. The remaining tentacles form orderly overlapping figure-eight coils under and behind the body. No spread-out raised arms. A dignified compact rectangular silhouette. Keep thin gold spectacles, navy formal collar and blue tie."
+    },
+    {
+      "slug": "planta-de-produccion",
+      "pose": "An active precision-inspection pose facing sharply LEFT and leaning FORWARD about 25 degrees. Two front tentacles converge at the far LEFT below the face to operate the digital caliper around a small machined metal part. A rear tentacle arcs HIGH above the RIGHT shoulder displaying the gear behind the head; the process tablet is held low at lower RIGHT tilted toward the octopus. Lower tentacles spread backward to the RIGHT for balance, with one long rear curl sweeping horizontally. Strong forward-leaning asymmetric industrial working silhouette. Keep white/amber safety helmet, lifted visor and industrial harness."
+    },
+    {
+      "slug": "restaurantes",
+      "pose": "A theatrical serving pose with the body TWISTED LEFT while the face looks back over its RIGHT side toward a plated meal. One very long right tentacle stretches UP and curves inward holding the plate above and to the RIGHT of the chef hat like an elegant waiter balancing a tray. The saucepan is carried low and far LEFT in a downward hanging loop, the whisk is tucked diagonally across the LOWER FRONT, not raised beside the face. Other tentacles fan in a sweeping spiral toward bottom RIGHT. Distinct extended high-right tray and low-left pan, dynamic diagonal silhouette. Keep white chef toque and burgundy neckerchief."
+    },
+    {
+      "slug": "transporte-pasajeros",
+      "pose": "A focused perfectly FRONTAL driver pose with head lowered a little, looking straight AHEAD. Two thick front tentacles wrap opposite sides of a black steering wheel held LOW and slightly horizontal in front of the belly, nearly parallel arm arrangement. Navigation tablet is close to the LOWER-LEFT side tilted toward the eyes, ticket tentacle extends briefly toward RIGHT at shoulder height. Rear tentacles are swept backward into compact upward-hooked loops mostly hidden behind the body, rather than fanning out radially. A squat forward-focused cockpit silhouette without any vehicle body. Keep driver cap, cyan edging and communications earpiece."
+    },
+    {
+      "slug": "cocheras",
+      "pose": "An attentive traffic-guiding side pose, torso turned three-quarter toward the RIGHT but the head looks back toward viewer's LEFT. One prominent long front tentacle extends straight horizontally LEFT making a clear welcoming/directing curled-tip gesture, creating a strong horizontal silhouette. The small parking barrier is held diagonally DOWN at lower RIGHT in its own supporting tentacle; a key fob hangs from a short tentacle close under the RIGHT cheek, while the ticket dispenser sits in a compact lower-left loop. Remaining tentacles form two large alternating S curves under the body. No props held up like trophies. Keep navy attendant cap and mint reflective vest."
+    }
+  ]
+}

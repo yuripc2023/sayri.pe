@@ -1,0 +1,93 @@
+[
+  {
+    "slug": "comercial",
+    "editReference": "../sources/comercial.png",
+    "generated": "/home/yuri/.codex/generated_images/01a17f16-491e-7643-a7c9-57e3f5204733/exec-d475a247-f13a-4f4d-8e4e-79f597201166.png",
+    "original": "sources/comercial.png",
+    "web": "comercial.webp"
+  },
+  {
+    "slug": "distribucion-logistica",
+    "editReference": "../sources/distribucion-logistica.png",
+    "generated": "/home/yuri/.codex/generated_images/01a17f16-491e-7643-a7c9-57e3f5204733/exec-072365ad-b701-43e9-8996-babc6c913dfb.png",
+    "original": "sources/distribucion-logistica.png",
+    "web": "distribucion-logistica.webp"
+  },
+  {
+    "slug": "droguerias",
+    "editReference": "../sources/droguerias.png",
+    "generated": "/home/yuri/.codex/generated_images/01a17f16-491e-7643-a7c9-57e3f5204733/exec-4795bbb4-0f64-47a4-9b26-f45a32a7e789.png",
+    "original": "sources/droguerias.png",
+    "web": "droguerias.webp"
+  },
+  {
+    "slug": "ferreterias",
+    "editReference": "../sources/ferreterias.png",
+    "generated": "/home/yuri/.codex/generated_images/01a17f16-491e-7643-a7c9-57e3f5204733/exec-4b0d52c2-5be9-4adb-9dd4-91c87ac57eed.png",
+    "original": "sources/ferreterias.png",
+    "web": "ferreterias.webp"
+  },
+  {
+    "slug": "odontologia",
+    "editReference": "../sources/odontologia.png",
+    "generated": "/home/yuri/.codex/generated_images/01a17f16-491e-7643-a7c9-57e3f5204733/exec-8a34790a-ab3f-4661-8bf0-f5619d75db44.png",
+    "original": "sources/odontologia.png",
+    "web": "odontologia.webp"
+  },
+  {
+    "slug": "agroindustria",
+    "editReference": "../sources/agroindustria.png",
+    "generated": "/home/yuri/.codex/generated_images/01a17f16-491e-7643-a7c9-57e3f5204733/exec-8d37f7b0-9b9d-456c-95a6-e9cd315898a3.png",
+    "original": "sources/agroindustria.png",
+    "web": "agroindustria.webp"
+  },
+  {
+    "slug": "colegios-profesionales",
+    "editReference": "../sources/colegios-profesionales.png",
+    "generated": "/home/yuri/.codex/generated_images/01a17f16-491e-7643-a7c9-57e3f5204733/exec-588bd153-a1cd-45cc-bac6-161526e96fde.png",
+    "original": "sources/colegios-profesionales.png",
+    "web": "colegios-profesionales.webp"
+  },
+  {
+    "slug": "educacion",
+    "editReference": "../sources/educacion.png",
+    "generated": "/home/yuri/.codex/generated_images/01a17f16-491e-7643-a7c9-57e3f5204733/exec-20274038-70d4-4639-9bd0-a428bfe28f68.png",
+    "original": "sources/educacion.png",
+    "web": "educacion.webp"
+  },
+  {
+    "slug": "estudios-juridicos",
+    "editReference": "../sources/estudios-juridicos.png",
+    "generated": "/home/yuri/.codex/generated_images/01a17f16-491e-7643-a7c9-57e3f5204733/exec-19d00a85-0129-48a1-a3f0-27b0f401b563.png",
+    "original": "sources/estudios-juridicos.png",
+    "web": "estudios-juridicos.webp"
+  },
+  {
+    "slug": "planta-de-produccion",
+    "editReference": "../sources/planta-de-produccion.png",
+    "generated": "/home/yuri/.codex/generated_images/01a17f16-491e-7643-a7c9-57e3f5204733/exec-0740ca97-d858-4488-9025-3670c096fae0.png",
+    "original": "sources/planta-de-produccion.png",
+    "web": "planta-de-produccion.webp"
+  },
+  {
+    "slug": "restaurantes",
+    "editReference": "../sources/restaurantes.png",
+    "generated": "/home/yuri/.codex/generated_images/01a17f16-491e-7643-a7c9-57e3f5204733/exec-33f4b5ff-853a-4c8a-8c9a-0423093dd7a7.png",
+    "original": "sources/restaurantes.png",
+    "web": "restaurantes.webp"
+  },
+  {
+    "slug": "transporte-pasajeros",
+    "editReference": "../sources/transporte-pasajeros.png",
+    "generated": "/home/yuri/.codex/generated_images/01a17f16-491e-7643-a7c9-57e3f5204733/exec-66c22b5b-9524-4da7-b636-f6f7bef685d1.png",
+    "original": "sources/transporte-pasajeros.png",
+    "web": "transporte-pasajeros.webp"
+  },
+  {
+    "slug": "cocheras",
+    "editReference": "../sources/cocheras.png",
+    "generated": "/home/yuri/.codex/generated_images/01a17f16-491e-7643-a7c9-57e3f5204733/exec-b67872a7-4d0b-40da-88cd-f338bce0997a.png",
+    "original": "sources/cocheras.png",
+    "web": "cocheras.webp"
+  }
+]
