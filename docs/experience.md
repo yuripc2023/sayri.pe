@@ -233,3 +233,34 @@ Se generaron tres imágenes con fondo transparente de la mascota SAYRI para Ente
 Las imágenes sustituyen los tres gráficos SVG dentro de `WorkingMethod`, conservando el icono de cierre y la línea numerada. Altura visual: 240 px en escritorio, 195 en tablet y 200 en móvil, con object-fit contain. Todas mantienen 1254 × 1254 px y transparencia. Las versiones web suman 1.168.848 bytes, se cargan mediante loading="lazy" y reservan dimensiones para mantener estable el contenido. No se añadieron dependencias.
 
 Verificación: build, pruebas de leads, narrativa y catálogo de mascotas correctos (ocho pruebas), y `git diff --check` correcto. Playwright decodificó las tres imágenes con ancho natural de 1254 px a 1440, 768 y 390 px en ambos temas, sin overflow horizontal ni errores JavaScript. Se revisaron las capturas de la sección en `output/playwright/method-mascots-{light,dark}-{1440,768,390}.png`. La cabecera sticky se ocultó únicamente para los recortes. No se repitieron la animación de entrada ni el formulario con API simulada; no se modificaron esas funciones.
+
+### Comparación interactiva de situaciones de la operación
+
+Se sustituyó `.problem` por `OperationEvolution`, con cinco botones: Pedidos por mensaje, Doble digitación, Información aislada, Reportes manuales y Decisiones tardías. Cada selección cambia los dos paneles, sus recorridos de tres nodos, la explicación y una frase de resultado. El panel actual presenta registros dispersos; el de SAYRI muestra un recorrido ordenado. Son ejemplos ilustrativos de procesos, no pantallas del producto ni garantías de resultados.
+
+Se generó un pulpo con fondo transparente como puente entre los paneles. Original, WebP, prompt completo y procedencia se conservan en `src/img/mascot/evolution/`; se usó image_gen integrado. No se añadieron dependencias ni Canvas. La escena funciona con HTML/CSS y una transición breve al cambiar la selección, desactivada con reduced motion. La comparación se anuncia con aria-live; los botones permiten Tab, clic, flechas e Inicio/Fin. El cierre enlaza a `#contacto`.
+
+Verificación realizada:
+- Build, regresión de leads, narrativa reservada y catálogo de mascotas correctos (ocho pruebas). `git diff --check` correcto. Se confirmó que el WebP terminado forma parte del build final.
+- Playwright verificó las cinco selecciones y sus títulos distintos, con tres nodos por panel. Fin seleccionó decisiones tardías y derecha volvió a pedidos.
+- Temas claro/oscuro a 1440, 768 y 390 px: sin overflow horizontal ni errores JavaScript. Mascota decodificada correctamente y transparencia revisada en las capturas.
+- Reduced motion: `animationName: none`. Enlace de cierre comprobado a `#contacto`, sin enviar formulario ni crear leads.
+- Capturas revisadas en `output/playwright/evolution-{light,dark}-{1440,768,390}.png`; cabecera sticky oculta solo durante los recortes.
+
+Límites: no se realizó auditoría de contraste, lectores de pantalla o rendimiento, ni se repitió el formulario con API simulada. En móvil los dos paneles se apilan y la mascota los enlaza verticalmente; en tablet y escritorio se mantienen a ambos lados de ella.
+
+### Crecimiento progresivo como recorrido explorable
+
+Se sustituyó `.scale` por `ProgressiveGrowth`, conservando `id="procesos"`. El título es «Empieza con un proceso. Crece a tu ritmo». Los siete niveles —Dato, Microproceso, Proceso, Capacidad, Área, Empresa e Inteligencia— son botones que actualizan una explicación, ejemplo y tres conceptos relacionados. El mismo recorrido comienza con producto/cantidad/cliente y llega al análisis de resultados. Se indica expresamente que puede comenzarse en cualquier nivel y que no es necesario implementar todo a la vez.
+
+Un núcleo SVG añade piezas y conexiones según el nivel y permite retroceder. La mascota generada tiene una postura nueva de construcción, con un tentáculo levantando una pieza y otros sujetando bloques. Se usó image_gen integrado; original PNG, WebP, prompt y procedencia quedan en `src/img/mascot/growth/`. No se añadieron dependencias, Canvas, autoplay ni captura de rueda. En móvil los niveles aparecen en una lista vertical y la ficha, el gráfico y el pulpo se apilan.
+
+Verificación:
+- Build, regresión de leads, narrativa reservada y catálogo de mascotas: correctos, ocho pruebas. `git diff --check` correcto.
+- Playwright: siete selecciones con sus ejemplos correspondientes. El diagrama pasó de 1 a 7 nodos activos y de 0 a 6 conexiones; cada nivel coincidió con el estado esperado.
+- Teclado: Fin seleccionó Inteligencia; derecha volvió a Dato. El cierre llega a `#contacto`, sin enviar formulario ni crear leads.
+- Temas claro/oscuro a 1440, 768 y 390 px sin overflow horizontal. La imagen se decodificó con 1254 px de ancho natural.
+- Reduced motion: la transición de la ficha devolvió `animationName: none`. Sin errores JavaScript en el recorrido.
+- Capturas revisadas: `output/playwright/growth-{light,dark}-{1440,768,390}.png`; cabecera sticky oculta solo durante los recortes.
+
+Límites: los nodos son una representación conceptual, no un conteo de módulos contratados o desplegados. No se realizaron auditorías de contraste, rendimiento o lector de pantalla; no se repitió el formulario con API simulada. La mascota no cambia de pose por nivel ni tiene articulación animada; es un render nuevo y diferente de los anteriores.

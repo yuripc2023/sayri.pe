@@ -1,0 +1,9 @@
+{
+  "tool": "image_gen (built-in)",
+  "reference": "../sayri-octopus.png",
+  "transparent_background": true,
+  "prompt": "Use case: stylized-concept. Asset: transparent website mascot bridging a fragmented work process and a connected work process. Use the provided SAYRI octopus as exact character identity reference. Preserve its friendly pearlescent white ceramic shell, polished gold mechanisms and eye rings, expressive blue glass lens eyes, navy circuitry and eight curling segmented tentacles. Premium realistic 3D product render. One character in a new purposeful sweeping pose, torso inclined slightly LEFT, face looking to the RIGHT at its work. The left-side tentacles gather exactly three small scattered navy glass tiles with simple relief symbols (a speech bubble, a document and a small table grid), while two right-side tentacles align exactly three small cyan glass cubes into an orderly connected row with a subtle thin luminous line. A clear collecting-and-organizing gesture, with both sides physically linked by the octopus; keep the face unobscured and props uncluttered. No costume or hat. Entire body and all objects within square frame with 8% transparent margin, comparable scale and lighting to reference, warm gold details with subtle cyan rim light. Truly transparent background; no floor, environment, podium, capsule or ground shadow plane. No labels, text, lettering, numbers, brands, watermark, additional characters, arrows, captions or panels.",
+  "generated": "/home/yuri/.codex/generated_images/01a17f16-491e-7643-a7c9-57e3f5204733/exec-0faedf99-48fd-41af-a8da-a83204b81a03.png",
+  "original": "sources/organizamos.png",
+  "web": "organizamos.webp"
+}

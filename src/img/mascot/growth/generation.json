@@ -1,0 +1,9 @@
+{
+  "tool": "image_gen (built-in)",
+  "reference": "../sayri-octopus.png",
+  "transparent_background": true,
+  "prompt": "Use case: stylized-concept. Asset: transparent-background website mascot showing progressive construction of a connected business. Reference defines the exact SAYRI robotic octopus identity: pearlescent white ceramic shell, navy circuitry, polished gold joints, blue glass eyes and eight segmented curling tentacles. Keep the same high fidelity premium 3D product-render materials. Required DISTINCT NEW POSE: body viewed in a strong three-quarter LEFT-facing profile, leaning diagonally UP toward the left, with head looking UP at a small cyan glass hexagonal module held by ONE long raised tentacle above the LEFT side of its head. Two low front tentacles support a compact partial arrangement of THREE connected blue glass hexagonal blocks near its lower RIGHT. A rear tentacle reaches behind the head in a large elegant arch; remaining lower tentacles curl into a low asymmetric stable base, not a symmetric spread. The action is gently placing the final small module into the structure, a builder/architect gesture. No hat, clothes or tools. Do not use the familiar front-right standing pose, listening gesture, steering wheel, paperwork or central orb. Clean readable silhouette with all head, tentacle tips and modules fully inside a square frame with 8% clear margin. One character, soft studio light with cool cyan rim highlights and warm gold reflections. Genuinely transparent background, no floor or ground shadow plane, no pedestal, scene, text, logo, letters, numbers or watermark.",
+  "generated": "/home/yuri/.codex/generated_images/01a17f16-491e-7643-a7c9-57e3f5204733/exec-15fb2f57-221f-4531-8dd8-03b74406f08a.png",
+  "original": "sources/construimos.png",
+  "web": "construimos.webp"
+}
