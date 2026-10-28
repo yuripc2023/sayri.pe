@@ -1,0 +1,48 @@
+{
+  "mode": "built-in imagegen",
+  "date": "2026-10-28",
+  "reference": "../sayri-octopus.webp",
+  "transparent_background": true,
+  "images": [
+    {
+      "slug": "cliente",
+      "prompt": "Use case: stylized-concept. Generate a single new SAYRI mascot variant using the reference only for character identity: cute sophisticated robotic octopus, glossy ivory white armor, intricate gold mechanical joints, large blue lens eyes. Full body with all tentacle tips visible, centered square composition, consistent character scale, generous 8% margins. Premium detailed 3D studio rendering, crisp silhouette, real transparent alpha background, no ground, no backdrop, no text, no watermark. Each pose must feel natural and distinct. CLIENTE: welcoming receptionist pose, body tilted warmly to the left in three-quarter view, one tentacle raised in a friendly wave above head, another presenting a small cyan customer profile card with silhouette icon, lower tentacles open invitingly. No other characters.",
+      "source": "/home/yuri/.codex/generated_images/01a17f16-491e-7643-a7c9-57e3f5204733/exec-61194942-f0a7-4305-a1a2-28c0f47276df.png"
+    },
+    {
+      "slug": "pedido",
+      "prompt": "Use case: stylized-concept. Generate a single new SAYRI mascot variant using the reference only for character identity: cute sophisticated robotic octopus, glossy ivory white armor, intricate gold mechanical joints, large blue lens eyes. Full body with all tentacle tips visible, centered square composition, consistent character scale, generous 8% margins. Premium detailed 3D studio rendering, crisp silhouette, real transparent alpha background, no ground, no backdrop, no text, no watermark. Each pose must feel natural and distinct. PEDIDO: focused side-facing pose looking down at a handheld blue tablet; two forward tentacles actively typing a checklist order on the tablet with icon-only rows; two rear tentacles curl upwards behind head, lower tentacles tucked tightly beneath.",
+      "source": "/home/yuri/.codex/generated_images/01a17f16-491e-7643-a7c9-57e3f5204733/exec-3f73dbea-8823-488f-ba89-e254fa11e701.png"
+    },
+    {
+      "slug": "stock",
+      "prompt": "Use case: stylized-concept. Generate a single new SAYRI mascot variant using the reference only for character identity: cute sophisticated robotic octopus, glossy ivory white armor, intricate gold mechanical joints, large blue lens eyes. Full body with all tentacle tips visible, centered square composition, consistent character scale, generous 8% margins. Premium detailed 3D studio rendering, crisp silhouette, real transparent alpha background, no ground, no backdrop, no text, no watermark. Each pose must feel natural and distinct. STOCK: dynamic leaning to the right, one long tentacle lifting a cardboard parcel overhead, another holding a compact blue barcode scanner pointed at two small stacked boxes supported by its lower tentacles; asymmetrical spread silhouette.",
+      "source": "/home/yuri/.codex/generated_images/01a17f16-491e-7643-a7c9-57e3f5204733/exec-7bf9ed27-9d77-4737-88e3-4acfdf80d8e5.png"
+    },
+    {
+      "slug": "procesamiento",
+      "prompt": "Use case: stylized-concept. Generate a single new SAYRI mascot variant using the reference only for character identity: cute sophisticated robotic octopus, glossy ivory white armor, intricate gold mechanical joints, large blue lens eyes. Full body with all tentacle tips visible, centered square composition, consistent character scale, generous 8% margins. Premium detailed 3D studio rendering, crisp silhouette, real transparent alpha background, no ground, no backdrop, no text, no watermark. Each pose must feel natural and distinct. PROCESAMIENTO: busy forward leaning pose, head low, multiple tentacles folding an open cardboard shipping box and placing one small blue product cube inside; another tentacle applying a blank shipping label, rear tentacle holding a tape dispenser; all props isolated with mascot.",
+      "source": "/home/yuri/.codex/generated_images/01a17f16-491e-7643-a7c9-57e3f5204733/exec-453b0a3b-c84b-4e80-be6f-e40a755ced8c.png"
+    },
+    {
+      "slug": "facturacion",
+      "prompt": "Use case: stylized-concept. Generate a single new SAYRI mascot variant using the reference only for character identity: cute sophisticated robotic octopus, glossy ivory white armor, intricate gold mechanical joints, large blue lens eyes. Full body with all tentacle tips visible, centered square composition, consistent character scale, generous 8% margins. Premium detailed 3D studio rendering, crisp silhouette, real transparent alpha background, no ground, no backdrop, no text, no watermark. Each pose must feel natural and distinct. FACTURACION: upright proud three-quarter frontal pose, one extended tentacle holding a tall white receipt with blue icon rows and no letters or numbers, second tentacle holding a small gold-edged calculator; lower tentacles spiral elegantly to the left, one tentacle gestures to receipt.",
+      "source": "/home/yuri/.codex/generated_images/01a17f16-491e-7643-a7c9-57e3f5204733/exec-d1aac17e-d118-44ed-9a45-52daf423f277.png"
+    },
+    {
+      "slug": "cobranza",
+      "prompt": "Use case: stylized-concept. Generate a single new SAYRI mascot variant using the reference only for character identity: cute sophisticated robotic octopus, glossy ivory white armor, intricate gold mechanical joints, large blue lens eyes. Full body with all tentacle tips visible, centered square composition, consistent character scale, generous 8% margins. Premium detailed 3D studio rendering, crisp silhouette, real transparent alpha background, no ground, no backdrop, no text, no watermark. Each pose must feel natural and distinct. COBRANZA: compact seated-like pose angled left, holding a blue payment terminal with gold edges in a forward tentacle and tapping a gold bank card with another; one rear tentacle raised in a clear celebratory check-shaped curl, another cradles three gold coins; eyes looking at terminal.",
+      "source": "/home/yuri/.codex/generated_images/01a17f16-491e-7643-a7c9-57e3f5204733/exec-99fbab27-9bae-4a9d-ab33-01aa07ac70d2.png"
+    },
+    {
+      "slug": "analitica",
+      "prompt": "Use case: stylized-concept. Generate a single new SAYRI mascot variant using the reference only for character identity: cute sophisticated robotic octopus, glossy ivory white armor, intricate gold mechanical joints, large blue lens eyes. Full body with all tentacle tips visible, centered square composition, consistent character scale, generous 8% margins. Premium detailed 3D studio rendering, crisp silhouette, real transparent alpha background, no ground, no backdrop, no text, no watermark. Each pose must feel natural and distinct. ANALITICA: inquisitive pose hovering diagonally, head tilted right, tentacle holding a magnifying glass over a large transparent blue dashboard displaying bar chart and pie chart with no text; two tentacles extend horizontally to point to individual chart bars, curled lower tentacles.",
+      "source": "/home/yuri/.codex/generated_images/01a17f16-491e-7643-a7c9-57e3f5204733/exec-88db9620-bdbf-4a20-91f5-9935645ea613.png"
+    },
+    {
+      "slug": "decision",
+      "prompt": "Use case: stylized-concept. Generate a single new SAYRI mascot variant using the reference only for character identity: cute sophisticated robotic octopus, glossy ivory white armor, intricate gold mechanical joints, large blue lens eyes. Full body with all tentacle tips visible, centered square composition, consistent character scale, generous 8% margins. Premium detailed 3D studio rendering, crisp silhouette, real transparent alpha background, no ground, no backdrop, no text, no watermark. Each pose must feel natural and distinct. DECISION: confident upward-looking pose turned three-quarter right, one tentacle points decisively up and right, another holds a glowing cyan compass with gold rim, two lower tentacles form broad stable spirals and another presents a small blue branching route arrow symbol. No crown.",
+      "source": "/home/yuri/.codex/generated_images/01a17f16-491e-7643-a7c9-57e3f5204733/exec-c518f677-6a83-4969-9d3f-41d923d64c82.png"
+    }
+  ]
+}
