@@ -191,3 +191,19 @@ Build y `git diff --check` correctos. Playwright verificó dos flechas dentro de
 Se retiraron la importación y el montaje de `SayriExperience` en HomePage. Todo `src/experience/` permanece guardado, con instrucciones para reutilizarlo en `src/experience/README.md`; no se activó aún en las páginas de solución. Se conservaron las anclas antiguas como marcador y el enlace del Hero ahora dice «Conoce la plataforma». Los estilos compartidos del CTA y anclas se trasladaron de `experience.css` a `brand.css` para que sigan aplicándose sin importar la narrativa.
 
 Verificación: build, tres pruebas de narrativa conservada y `git diff --check` correctos. La salida de producción ya no incluye los chunks de escena, Three.js ni GSAP. Playwright confirmó ausencia de narrativa, Canvas y pin-spacer, un h1 y ausencia de overflow a 1440, 768 y 390 px. La segunda sección visible pasa a ser «Diseña, construye y controla tu empresa desde un solo lugar». El enlace del Hero llega a `#despues-de-la-historia` y la antigua ancla `#historia-sayri` se conserva. No se repitió el formulario ni se validó la narrativa en páginas sectoriales porque esa adaptación queda para trabajo futuro.
+
+### Presentación interactiva de la plataforma después del Hero
+
+Se sustituyó el bloque de título y tres acciones por `PlatformOverview`, una sección de dos columnas con el título «Tu operación conectada. Tu empresa bajo control.», explicación, CTA de demo existente y enlace a `#plataforma`. El segundo panel muestra el núcleo SAYRI conectado a Ventas, Inventarios, Operaciones, Finanzas e Inteligencia. Cada botón cambia una ficha HTML con explicación y tres capacidades. El grupo admite Tab/Enter y flechas, Inicio/Fin; anuncia cambios con aria-live y conserva el id del título anterior.
+
+El gráfico utiliza HTML/SVG, logos locales y CSS; no añade dependencias, descargas, Canvas ni vuelve a activar la narrativa reservada. Solo la conexión seleccionada tiene movimiento suave de guiones, desactivado con reduced motion. Ambos temas tienen colores propios; en móvil texto y panel se apilan. Se acotó el diagrama a 420 px para reducir la altura respecto de la primera implementación.
+
+Verificación realizada:
+- `pnpm build`, `node tests/leads.test.mjs`, `node tests/experience.test.mjs`, `node tests/hangar.test.mjs`: correctos, ocho pruebas. `git diff --check` correcto.
+- Playwright: las cinco selecciones cambiaron el nombre, título, explicación y tres capacidades; tecla Fin seleccionó Inteligencia y derecha volvió a Ventas.
+- Demo conserva su URL configurada de WhatsApp (no se envió mensaje); el enlace secundario llega a `#plataforma`.
+- Sin overflow horizontal a 1440, 768 y 390 px en tema claro y oscuro. Alturas finales de la sección: 786, 727 y 1128 px respectivamente; en móvil la altura incluye ambas columnas apiladas.
+- Con movimiento normal la conexión usa `platform-flow`; reduced motion devuelve `animationName: none`. Sin errores JavaScript en el recorrido.
+- Capturas finales: `output/playwright/platform-{light,dark}-{1440,768,390}.png`. Se ocultó la cabecera únicamente durante esas capturas para evitar que el sticky tape el recorte del componente.
+
+No se realizó auditoría de contraste, lector de pantalla ni rendimiento; no se repitió la prueba visual del formulario con API simulada. La explicación es una presentación general de áreas de gestión, no un panel conectado a datos reales.
