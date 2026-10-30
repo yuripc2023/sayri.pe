@@ -2,6 +2,7 @@ export type SectorMascotAsset = { src: string; personality: string; role: string
 
 // Static URLs let Vite fingerprint each render; the slider mounts only nearby portraits.
 export const sectorMascots: Record<string, SectorMascotAsset> = {
+  'elecciones': { src: new URL('../img/mascot/sectors/poses-v2/elecciones.webp', import.meta.url).href, personality: 'Imparcial · Organizado', role: 'Coordinador electoral' },
   'comercial': { src: new URL('../img/mascot/sectors/poses-v2/comercial.webp', import.meta.url).href, personality: 'Ágil · Persuasivo', role: 'Consultor comercial' },
   'distribucion-logistica': { src: new URL('../img/mascot/sectors/poses-v2/distribucion-logistica.webp', import.meta.url).href, personality: 'Resolutivo · Organizado', role: 'Coordinador logístico' },
   'droguerias': { src: new URL('../img/mascot/sectors/poses-v2/droguerias.webp', import.meta.url).href, personality: 'Meticuloso · Confiable', role: 'Especialista farmacéutico' },

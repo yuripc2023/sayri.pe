@@ -4,6 +4,7 @@ export type Armor = {
 }
 // El orden y la identidad del hangar se amplían agregando una entrada.
 export const armors: Armor[] = [
+  { slug:'elecciones', label:'Elecciones', color:'#64d8c4', form:'precise', emblem:'M-16-4H16V18H-16ZM-10-10H10M-7-17L0-10L12-23', description:'Organiza tus elecciones con claridad y control, desde el padrón hasta los resultados.', capabilities:['Padrones y candidaturas','Votación asistida','Participación y resultados'] },
   { slug:'comercial', label:'Comercial', color:'#ff985f', form:'agile', emblem:'M-12 9V-2H-4V9M-1 9V-9H7V9M10 9V-16H18V9', description:'Convierte cada oportunidad en el siguiente paso de tu negocio.', capabilities:['Clientes y CRM','Ventas y pedidos','Caja y facturación'] },
   { slug:'distribucion-logistica', label:'Distribución', color:'#53b8ff', form:'heavy', emblem:'M-17-8H5V8H-17ZM5-2H13L19 5V8H5M-11 8V13M12 8V13', description:'Conecta el almacén, tu equipo en campo y cada entrega.', capabilities:['Inventarios','Pedidos en campo','Rutas y entregas'] },
   { slug:'droguerias', label:'Droguería', color:'#4de0ce', form:'precise', emblem:'M-5-16H5V-5H16V5H5V16H-5V5H-16V-5H-5Z', description:'Precisión y trazabilidad para una operación que exige cuidado.', capabilities:['Lotes y vencimientos','Trazabilidad','Control de stock'] },

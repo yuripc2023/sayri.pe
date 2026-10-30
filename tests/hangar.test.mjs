@@ -4,7 +4,7 @@ import { armors } from '../src/data/armors.ts'
 import { solutions } from '../src/data/solutions.ts'
 
 test('every selectable sector has a distinct identity and an existing destination', () => {
-  assert.equal(armors.length, 13)
+  assert.equal(armors.length, 14)
   for (const field of ['slug', 'label', 'emblem']) {
     assert.equal(new Set(armors.map(armor => armor[field])).size, armors.length)
   }
@@ -16,7 +16,7 @@ test('every selectable sector has a distinct identity and an existing destinatio
 })
 
 // A repeated base image must never replace the promised occupation-specific renders.
-test('all 13 sectors have a unique local render and personality', async () => {
+test('all sectors have a unique local render and personality', async () => {
   const { sectorMascots } = await import('../src/data/sectorMascots.ts')
   const { readFileSync } = await import('node:fs')
   const { createHash } = await import('node:crypto')

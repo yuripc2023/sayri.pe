@@ -1,0 +1,74 @@
+/* SAYRI: neutrales derivados de #07121c mezclados con blanco.
+   Los colores de rubros, logos y avisos conservan su significado. */
+:root{
+  --sayri-base:#07121c;
+  --sayri-surface:#111c25; /* 4% blanco */
+  --sayri-raised:#1b252e; /* 8% blanco */
+  --sayri-hover:#252e37; /* 12% blanco */
+  --sayri-border:#3e4750; /* 22% blanco */
+  --sayri-muted:#b5b8bb; /* 70% blanco */
+  --sayri-text:#f0f1f1; /* 94% blanco */
+  --ink:var(--sayri-base);--deep:var(--sayri-base);
+  --paper:#fff;--mist:#f0f1f1;--line:#cdd0d2;--muted:#525a62;
+  --blue:#285574;--aqua:#8fbfe0;
+}
+html[data-theme="dark"]{
+  --ink:var(--sayri-text);--deep:var(--sayri-base);
+  --paper:var(--sayri-base);--mist:var(--sayri-surface);
+  --line:var(--sayri-border);--muted:var(--sayri-muted);
+  --blue:#a2c5df;--aqua:#a2c5df;
+}
+html[data-theme="dark"] .header{background:color-mix(in srgb,var(--sayri-base) 95%,transparent);border-color:var(--line)}
+html[data-theme="dark"] .theme-toggle{background:var(--sayri-surface);border-color:var(--line);color:var(--ink)}
+html[data-theme="dark"] .button{background:var(--blue);border-color:var(--blue);color:var(--sayri-base)}
+html[data-theme="dark"] .button:hover{background:#cddfea;border-color:#cddfea;color:var(--sayri-base)}
+html[data-theme="dark"] footer{background:var(--sayri-base);color:var(--ink)}
+html[data-theme="dark"] .footer-bottom,html[data-theme="dark"] .atic-signature{border-color:var(--line)}
+html[data-theme="dark"] .footer-top small,html[data-theme="dark"] .footer-bottom{color:var(--muted)}
+html[data-theme="dark"] .solutions-list a:hover{background:var(--sayri-raised)}
+/* Component tokens: misma familia de superficies y un solo acento de interfaz. */
+section.platform-overview.platform-overview,section.operation-evolution.operation-evolution,section.progressive-growth.progressive-growth,.order-journey,.mobile-operation,.technology-ecosystem{
+ --platform-accent:var(--blue);--platform-panel:var(--mist);--platform-border:var(--line);--platform-subtle:var(--muted);
+ --evo-accent:var(--blue);--evo-panel:var(--mist);--evo-soft:var(--mist);--evo-border:var(--line);--evo-muted:var(--muted);
+ --growth-accent:var(--blue);--growth-panel:var(--mist);--growth-border:var(--line);--growth-muted:var(--muted);
+ --journey-accent:var(--blue);--journey-panel:var(--mist);--mobile-accent:var(--blue);--technology-accent:var(--blue);
+}
+html[data-theme="dark"] section.platform-overview.platform-overview,
+html[data-theme="dark"] section.operation-evolution.operation-evolution,
+html[data-theme="dark"] section.progressive-growth.progressive-growth,
+html[data-theme="dark"] .order-journey,
+html[data-theme="dark"] .mobile-operation,
+html[data-theme="dark"] .technology-ecosystem,
+html[data-theme="dark"] section.sayri-faq,
+html[data-theme="dark"] section.contact-section{background:var(--sayri-base)}
+html[data-theme="dark"] .growth-detail,
+html[data-theme="dark"] .growth-levels button,
+html[data-theme="dark"] .growth-card-heading .growth-index,
+html[data-theme="dark"] .growth-detail-nav button,
+html[data-theme="dark"] .technology-badges button,
+html[data-theme="dark"] .technology-detail,
+html[data-theme="dark"] .contact-form{background:var(--sayri-surface);border-color:var(--line)}
+html[data-theme="dark"] .growth-index{background:var(--sayri-base)}
+html[data-theme="dark"] .growth-levels button[aria-pressed=true],
+html[data-theme="dark"] .technology-badges button[aria-pressed=true]{background:var(--sayri-raised);border-color:var(--blue)}
+html[data-theme="dark"] .growth-levels button[aria-pressed=true] .growth-index,
+html[data-theme="dark"] .growth-detail-nav button:last-child{background:var(--blue);color:var(--sayri-base)}
+html[data-theme="dark"] .growth-network-node circle{fill:var(--sayri-surface)}
+html[data-theme="dark"] .growth-network-node.node-reached circle{fill:var(--sayri-hover)}
+section.working-method.working-method{--method-accent:#a2c5df;--method-muted:var(--sayri-muted);--method-line:var(--sayri-border);background:var(--sayri-base);color:var(--sayri-text)}
+.working-method .method-dot,.working-method .method-number,.working-method .method-step-label{background:var(--sayri-base)}
+.working-method .method-dot{box-shadow:0 0 0 6px var(--sayri-base)}
+html[data-theme="dark"] .method-dot,html[data-theme="dark"] .method-number,html[data-theme="dark"] .method-step-label{background:var(--sayri-base)}
+html[data-theme="dark"] .method-dot{box-shadow:0 0 0 6px var(--sayri-base)}
+html[data-theme="dark"] .contact-field input,html[data-theme="dark"] .contact-field textarea{background:var(--sayri-base)}
+html[data-theme="dark"] .platform-core,html[data-theme="dark"] .platform-node,
+html[data-theme="dark"] .process-chip,html[data-theme="dark"] .evolution-options button{background:var(--sayri-surface);border-color:var(--line)}
+html[data-theme="dark"] .platform-node[aria-pressed=true],html[data-theme="dark"] .evolution-options button[aria-pressed=true]{background:var(--sayri-raised);color:var(--ink);border-color:var(--blue)}
+html[data-theme="dark"] .mobile-operation-cta,html[data-theme="dark"] .journey-closing-link,html[data-theme="dark"] .journey-controls button:last-child{color:var(--sayri-base)}
+html[data-theme="dark"] section.working-method.working-method{background:var(--sayri-base)}
+html[data-theme="dark"] section.platform-overview.platform-overview{--platform-accent:var(--blue);--platform-panel:var(--sayri-surface);--platform-border:var(--line);--platform-subtle:var(--muted);--platform-wire:var(--sayri-border)}
+html[data-theme="dark"] section.operation-evolution.operation-evolution{--evo-accent:var(--blue);--evo-panel:var(--sayri-surface);--evo-soft:var(--sayri-raised);--evo-border:var(--line);--evo-muted:var(--muted)}
+html[data-theme="dark"] section.progressive-growth.progressive-growth{--growth-accent:var(--blue);--growth-panel:var(--sayri-surface);--growth-border:var(--line);--growth-muted:var(--muted)}
+html[data-theme="dark"] .order-journey{--journey-accent:var(--blue);--journey-panel:var(--sayri-surface)}
+html[data-theme="dark"] .mobile-operation{--mobile-accent:var(--blue)}
+html[data-theme="dark"] .technology-ecosystem{--technology-accent:var(--blue)}

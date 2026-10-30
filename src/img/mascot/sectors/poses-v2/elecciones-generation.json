@@ -1,0 +1,6 @@
+{
+  "tool": "image_gen built-in",
+  "reference": "educacion.webp",
+  "prompt": "Create a new SAYRI sector mascot for ELECCIONES. Reference image is character/style reference only: preserve cute sophisticated robotic octopus identity, glossy ivory armor, intricate gold joints and large blue lens eyes, premium detailed 3D rendering. New distinct election coordinator character: no graduation cap, no book, no lightbulb. Wearing a neat deep teal coordinator vest with gold trim; one raised tentacle inserts a white ballot marked with a simple teal check into a compact ivory and teal ballot box held by two lower tentacles, another holds a clipboard with icon-only checklist. Friendly attentive expression, asymmetrical full-body pose with curled tentacles, all tips visible and 8% margins, square composition, transparent alpha background, no backdrop, no ground, no text, no letters, no logos, no watermark. Save generated image file and report its local path.",
+  "output": "elecciones.webp"
+}
