@@ -48,7 +48,7 @@ export function TechnologyEcosystem() {
     event.preventDefault(); setSelected(next)
     event.currentTarget.querySelectorAll('button')[next]?.focus()
   }
-  return <section className="technology-ecosystem" aria-labelledby="technology-title">
+  return <section id="tecnologia" className="technology-ecosystem" aria-labelledby="technology-title">
     <header className="technology-header"><p className="eyebrow">EVOLUCIÓN CONTINUA · OCHO PIEZAS, UN MISMO SISTEMA</p><h2 id="technology-title">Tecnología que conecta.<br /><span>Ingeniería que te acompaña.</span></h2><p>Cada pieza cumple una función para que SAYRI pueda evolucionar junto a tu operación.</p></header>
     <p className="technology-instruction">Elige una tecnología y descubre qué aporta a SAYRI.</p>
     <div className="technology-scene">

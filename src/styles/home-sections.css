@@ -1,0 +1,36 @@
+/* Ritmo visual de la portada: superficies alternadas y límites discretos.
+   El hangar y el bloque de método conservan su identidad oscura. */
+.home-page{
+  --home-section-base:#fff;
+  --home-section-alternate:#f0f4f6;
+  --home-section-divider:#d4dfe5;
+}
+html[data-theme="dark"] .home-page{
+  --home-section-base:var(--sayri-base);
+  --home-section-alternate:var(--sayri-surface);
+  --home-section-divider:#303c47;
+}
+html[data-theme] .home-page>section:not(.sector-hangar):not(.working-method){
+  background:var(--home-section-base);
+  border-top:1px solid var(--home-section-divider);
+}
+html[data-theme] .home-page>section:nth-of-type(odd):not(.sector-hangar):not(.working-method){
+  background:var(--home-section-alternate);
+}
+html[data-theme] .home-page>section.working-method{
+  border-top:1px solid var(--sayri-border);
+  border-bottom:1px solid var(--sayri-border);
+}
+/* Mantiene contraste entre las tarjetas y la superficie alternada. */
+html[data-theme="dark"] .home-page>section:nth-of-type(odd) :is(.growth-detail,.growth-levels button,.technology-detail,.technology-badges button,.contact-form){
+  background:var(--sayri-raised);
+}
+html[data-theme="dark"] .home-page>section:nth-of-type(odd) :is(.growth-levels button,.technology-badges button)[aria-pressed="true"]{
+  background:var(--sayri-hover);
+}
+
+/* Acceso flotante a WhatsApp: icono vectorial centrado. */
+.whatsapp{width:54px;height:54px;line-height:1;color:#fff;background:#25d366;bottom:max(20px,env(safe-area-inset-bottom));right:max(20px,env(safe-area-inset-right));transition:transform .2s,box-shadow .2s}
+.whatsapp svg{display:block;width:28px;height:28px;flex-shrink:0}
+.whatsapp:hover{transform:translateY(-2px);box-shadow:0 8px 24px #0004}
+.whatsapp:focus-visible{outline:3px solid var(--blue);outline-offset:4px}

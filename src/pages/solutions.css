@@ -1,0 +1,51 @@
+main.solutions-page{max-width:none;padding:0 0 70px}
+.solutions-introduction{display:flex;flex-direction:column;gap:0}
+.solutions-introduction>div:first-child{width:100%;max-width:1440px;margin:auto;padding:38px 24px 30px}
+.solutions-introduction .eyebrow{margin-bottom:14px}
+.solutions-introduction h1{max-width:1000px;font-size:clamp(2.2rem,3.8vw,4rem);line-height:1.08;margin-bottom:16px}
+.solutions-introduction .lead{max-width:900px;margin:0}
+.solutions-orbit-panel{width:100%;min-width:0;height:calc(100svh - 96px);min-height:600px;padding:24px max(24px,calc((100vw - 1440px)/2));border-block:1px solid var(--line);background:radial-gradient(ellipse at center,color-mix(in srgb,var(--blue) 8%,transparent),transparent 65%),var(--mist);display:grid;grid-template-rows:auto minmax(0,1fr) auto auto;gap:12px}
+.solutions-orbit-top{display:flex;justify-content:space-between;gap:12px;align-items:center;color:var(--muted);font-size:10px;letter-spacing:.08em}
+.solutions-orbit-top button{border:1px solid var(--line);background:var(--paper);color:var(--ink);padding:10px 14px;border-radius:20px;cursor:pointer;font-size:12px;letter-spacing:0}
+.solutions-orbit-visual{position:relative;min-height:0;width:100%;isolation:isolate}
+.solutions-orbit-visual .sector-three-canvas{inset:0;z-index:2}
+
+.solutions-orbit-core{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:150px;height:150px;border-radius:50%;border:1px solid var(--line);background:var(--paper);box-shadow:0 0 0 12px color-mix(in srgb,var(--blue) 5%,transparent);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;pointer-events:none;z-index:3}
+.solutions-orbit-core img{width:120px;height:auto}.solutions-orbit-core span{font-size:7px;letter-spacing:.13em;color:var(--muted)}
+.orbit-logo-dark{display:none}html[data-theme="dark"] .orbit-logo-dark{display:block}html[data-theme="dark"] .orbit-logo-light{display:none}
+.solutions-orbit-hint{font-size:12px;line-height:1.6;color:var(--muted);margin:0;text-align:center}
+.solutions-orbit-panel>.text-link{justify-self:center;font-size:12px;line-height:1.6}
+.solutions-page :focus-visible{outline:2px solid var(--blue);outline-offset:4px}
+.solutions-page #listado-soluciones{max-width:1392px;margin:50px auto 0;scroll-margin-top:110px;width:calc(100% - 48px)}
+@media(max-width:1099px){.solutions-orbit-panel{height:calc(100svh - 80px);min-height:540px}}
+@media(max-width:540px){.solutions-introduction>div:first-child{padding:30px 24px 26px}.solutions-orbit-panel{padding:18px 16px;min-height:500px}.solutions-orbit-core{width:94px;height:94px}.solutions-orbit-core img{width:80px}.solutions-orbit-core span{font-size:5px}.solutions-orbit-top{font-size:9px}.solutions-orbit-hint{font-size:11px}.solutions-page #listado-soluciones{margin-top:30px}}
+.solutions-orbit-visual{overflow:hidden}
+
+/* Título y escena comparten el primer viewport. */
+.solutions-introduction{height:calc(100svh - 96px);min-height:620px;display:grid;grid-template-rows:auto minmax(0,1fr);background:var(--mist)}
+.solutions-introduction>div:first-child{padding:26px 24px 16px;text-align:center}
+.solutions-introduction .eyebrow{font-size:9px;margin-bottom:10px}
+.solutions-introduction h1{font-size:clamp(1.8rem,2.7vw,3rem);max-width:1100px;margin:0 auto 10px}
+.solutions-introduction .lead{font-size:14px;line-height:1.6;margin:auto;max-width:850px}
+.solutions-orbit-panel{height:auto;min-height:0;border:0;padding-top:0;padding-bottom:20px;gap:8px;background:radial-gradient(ellipse at center,color-mix(in srgb,var(--blue) 9%,transparent),transparent 65%)}
+.solutions-orbit-core{box-shadow:0 0 0 12px color-mix(in srgb,var(--blue) 8%,transparent),0 0 65px color-mix(in srgb,var(--blue) 15%,transparent)}
+
+@media(max-width:1099px){.solutions-introduction{height:calc(100svh - 80px);min-height:600px}}
+@media(max-width:540px){.solutions-introduction{min-height:620px}.solutions-introduction>div:first-child{padding:22px 24px 12px}.solutions-introduction h1{font-size:1.8rem}.solutions-introduction .lead{font-size:12px}.solutions-orbit-panel{padding:0 16px 18px}.solutions-orbit-core{width:94px;height:94px}}
+@media(max-width:540px){.solutions-orbit-hint{padding-inline:30px}.solutions-orbit-panel{padding-bottom:24px}}
+
+/* Fondo fijo de la escena, independiente del tema global. */
+.solutions-introduction{--ink:#f0f1f1;--muted:#b5b8bb;--blue:#a2c5df;--line:#3e4750;--paper:#07121c;--mist:#07121c;background:#07121c;color:var(--ink)}
+.solutions-introduction .solutions-orbit-panel{background:#07121c}
+.solutions-introduction .orbit-logo-light{display:none}
+.solutions-introduction .orbit-logo-dark{display:block}
+
+/* Mayor protagonismo de la animación y etiquetas siempre presentes. */
+.solutions-introduction>div:first-child{padding:16px 24px 8px}
+.solutions-introduction .eyebrow{margin-bottom:6px;font-size:8px}
+.solutions-introduction h1{font-size:clamp(1.4rem,1.9vw,2rem);line-height:1.15;margin-bottom:6px}
+.solutions-introduction .lead{font-size:12px;line-height:1.5}
+.solutions-orbit-panel{padding-inline:24px;padding-bottom:16px;gap:6px}
+.solutions-orbit-core{z-index:1;width:126px;height:126px}
+.solutions-orbit-core img{width:102px}
+@media(max-width:540px){.solutions-introduction>div:first-child{padding:14px 20px 8px}.solutions-introduction h1{font-size:1.4rem}.solutions-introduction .lead{font-size:11px}.solutions-orbit-panel{padding-inline:12px}.solutions-orbit-core{width:82px;height:82px}.solutions-orbit-core img{width:70px}.solutions-orbit-core span{font-size:4.5px}}

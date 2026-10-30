@@ -42,7 +42,7 @@ export function OrderJourney() {
     setSelected(next)
     event.currentTarget.querySelectorAll('button')[next]?.focus()
   }
-  return <section className="order-journey" aria-labelledby="journey-title">
+  return <section id="recorrido-pedido" className="order-journey" aria-labelledby="journey-title">
     <header className="journey-header">
       <div><p className="eyebrow">UNA OPERACIÓN, UNA MISMA INFORMACIÓN</p><h2 id="journey-title">Un pedido conecta <span>toda tu empresa.</span></h2></div>
       <p>Desde el primer contacto hasta la decisión final, cada área trabaja con la misma información.</p>

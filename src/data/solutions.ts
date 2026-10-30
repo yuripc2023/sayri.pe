@@ -4,3 +4,9 @@ export const solutions: Solution[] = [
 ].map(([slug,name,title,category]) => ({slug,name,title,category,description:'Estamos preparando la presentación completa de esta solución.'}))
 
 solutions.push({ slug: 'elecciones', name: 'Suffrage', title: 'Gestión de procesos electorales', category: 'Elecciones', description: 'Organiza elecciones, administra padrones y consulta resultados con votación asistida e identificada.', available: true })
+
+const parking = solutions.find(solution => solution.slug === "cocheras")
+if (parking) {
+  parking.available = true
+  parking.description = "Visualiza espacios, registra vehículos y conecta permanencia, cobro y comprobantes desde una sola plataforma."
+}

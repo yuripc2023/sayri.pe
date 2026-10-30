@@ -25,7 +25,7 @@ export function OperationEvolution() {
     event.currentTarget.querySelectorAll<HTMLButtonElement>('button')[next]?.focus()
   }
 
-  return <section className="operation-evolution" aria-labelledby="evolution-title">
+  return <section id="evolucion" className="operation-evolution" aria-labelledby="evolution-title">
     <div className="evolution-heading"><div><p className="eyebrow">CUANDO LA OPERACIÓN CRECE</p><h2 id="evolution-title">Cuando tu negocio crece,<br/><em>tu forma de trabajar también puede evolucionar.</em></h2></div><p>Conecta lo que hoy resuelves entre mensajes, hojas de cálculo y tareas manuales.</p></div>
     <div className="evolution-selector-top"><p>¿Te resulta familiar?</p><span>ELIGE UNA SITUACIÓN <span aria-hidden="true">↓</span></span></div>
     <div className="evolution-options" role="group" aria-label="Situaciones de tu operación" onKeyDown={navigate}>{situations.map((item, index) => <button type="button" key={item.id} aria-pressed={selected === index} aria-controls="evolution-comparison" onClick={() => setSelected(index)}><span aria-hidden="true">0{index + 1}</span>{item.label}</button>)}</div>

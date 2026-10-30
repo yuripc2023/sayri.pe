@@ -27,7 +27,7 @@ export function WorkingMethod() {
     return () => observer.disconnect()
   }, [])
 
-  return <section className="working-method" ref={root} aria-labelledby="method-title">
+  return <section id="como-trabajamos" className="working-method" ref={root} aria-labelledby="method-title">
     <div className="method-heading"><div><p className="eyebrow">NUESTRA FORMA DE ENTENDER LA TECNOLOGÍA</p><h2 id="method-title">Una mejor manera de trabajar empieza por <em>entenderte.</em></h2></div><p className="method-intro">Conocemos tu operación, ordenamos los procesos y construimos la tecnología que necesitas.</p></div>
     <ol className="method-steps">{steps.map((step, index) => <li className="method-step" key={step.title} style={{ '--step': index } as CSSProperties}>
       <div className="method-step-top" aria-hidden="true"><span className="method-dot"><i/></span><span className="method-number">0{index + 1}</span><span className="method-step-label">{step.label}</span></div>

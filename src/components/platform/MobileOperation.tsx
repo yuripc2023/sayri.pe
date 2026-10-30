@@ -5,7 +5,7 @@ import './mobile-operation.css'
 
 export function MobileOperation() {
   const id = useId().replace(/:/g, '')
-  return <section className="mobile-operation" aria-labelledby="mobile-operation-title">
+  return <section id="app-movil" className="mobile-operation" aria-labelledby="mobile-operation-title">
     <div className="mobile-operation-copy">
       <p className="eyebrow">SAYRI MÓVIL · CERCA DE TU OPERACIÓN</p>
       <h2 id="mobile-operation-title">Tu operación,<br /><span>donde estés.</span></h2>
