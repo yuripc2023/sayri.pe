@@ -8,7 +8,7 @@ solutions.push({ slug: 'elecciones', name: 'Suffrage', title: 'Gestión de proce
 const parking = solutions.find(solution => solution.slug === "cocheras")
 if (parking) {
   parking.available = true
-  parking.description = "Visualiza espacios, registra vehículos y conecta permanencia, cobro y comprobantes desde una sola plataforma."
+  parking.description = "Conoce la base de placa, servicios, espacios, pagos y caja y el desarrollo de estadías y tarifas para tu cochera."
 }
 
 const commercial = solutions.find(solution => solution.slug === "comercial")
@@ -51,4 +51,34 @@ const associations = solutions.find(solution => solution.slug === 'colegios-prof
 if (associations) {
   associations.available = true
   associations.description = 'Conecta padrón de colegiados, cuotas, cobranza y servicios institucionales con una base para tu portal del colegiado.'
+}
+
+const education = solutions.find(solution => solution.slug === 'educacion')
+if (education) {
+  education.available = true
+  education.description = 'Conecta alumnos, docentes, admisión, matrículas, certificados y cobranza para la gestión administrativa de tu institución.'
+}
+
+const legal = solutions.find(solution => solution.slug === 'estudios-juridicos')
+if (legal) {
+  legal.available = true
+  legal.description = 'Conecta clientes, agenda, tareas, documentos y cobranza, con una base para la gestión de arbitrajes de tu estudio.'
+}
+
+const production = solutions.find(solution => solution.slug === 'planta-de-produccion')
+if (production) {
+  production.available = true
+  production.description = 'Conecta materiales, compras, inventario por lotes, tareas, ventas y despachos para la gestión administrativa de tu planta.'
+}
+
+const restaurant = solutions.find(solution => solution.slug === 'restaurantes')
+if (restaurant) {
+  restaurant.available = true
+  restaurant.description = 'Conecta carta, ambientes, mesas, pedidos y caja, con una base para implementar tu carta QR y la gestión de tu restaurante.'
+}
+
+const transport = solutions.find(solution => solution.slug === 'transporte-pasajeros')
+if (transport) {
+  transport.available = true
+  transport.description = 'Conoce la base de flota y administración y las ampliaciones para gestionar viajes, asientos, reservas y boletos de pasajeros.'
 }
