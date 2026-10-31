@@ -12,12 +12,12 @@ const modules = [
 ]
 
 const benefits = [
-  ['Accede desde donde estés', 'Trabaja desde el navegador de dispositivos compatibles, con conexión a internet y los permisos de tu usuario. Sin instalar un programa de escritorio en cada computadora.'],
-  ['Tu equipo puede crecer', 'Una arquitectura escalable permite ampliar capacidad para acompañar más usuarios, operaciones y datos. La capacidad simultánea depende de la infraestructura y la carga de trabajo.'],
-  ['Actualizaciones centralizadas', 'Las mejoras de la web se publican de forma centralizada y quedan disponibles sin una instalación manual en cada equipo. Menos instalaciones que mantener y una distribución más ágil de las mejoras.'],
-  ['Una plataforma que evoluciona', 'Los desarrollos comunes realizados para distintas empresas pueden beneficiar a otras organizaciones, según sus módulos y configuración. Se comparten mejoras del producto; cada empresa conserva su propia información.'],
-  ['Pantallas que se adaptan a tu trabajo', 'Los componentes reutilizables de React facilitan mejorar o personalizar partes de la interfaz. Las acciones pueden actualizar datos y secciones sin recargar toda la página, y la web puede evolucionar de forma independiente de la app.'],
-  ['Web y app conectadas', 'React y React Native consultan y actualizan información mediante Django. Las reglas de negocio implementadas en el backend se comparten para mantener criterios consistentes entre ambos canales.'],
+  { tag: 'LIBERTAD PARA TRABAJAR', title: 'Tu empresa va contigo.', description: 'Abre el navegador y sigue con tu operación desde tu computadora, tablet o celular. Sin instalar un programa de escritorio.', note: 'Con conexión a internet, un dispositivo compatible y los permisos de tu usuario.', icon: 'M3 4h18v12H3ZM8 21h8m-4-5v5M8 8h8' },
+  { tag: 'ESPACIO PARA CRECER', title: 'Más equipo. Más posibilidades.', description: 'Suma usuarios, procesos y datos sobre una arquitectura que permite ampliar su capacidad a medida que tu empresa crece.', note: 'La capacidad simultánea depende de la infraestructura y la carga de trabajo.', icon: 'M4 18V12h4v6m3 0V8h4v10m3 0V4h3v14M3 21h19' },
+  { tag: 'MENOS INSTALACIONES', title: 'Las mejoras llegan a tu web.', description: 'Publicamos las actualizaciones de forma centralizada para que estén disponibles sin instalar una nueva versión en cada computadora.', note: 'Menos mantenimiento por equipo y una distribución más ágil de las mejoras.', icon: 'M19 7a8 8 0 1 0 1 9M19 3v5h-5M8 12l3 3 5-6' },
+  { tag: 'EVOLUCIÓN COMPARTIDA', title: 'Una mejora puede impulsar a muchos.', description: 'Los desarrollos comunes para distintas empresas pueden incorporarse a SAYRI y aportar nuevas posibilidades a tu organización.', note: 'Según los módulos y la configuración. Se comparten mejoras del producto, no la información de cada empresa.', icon: 'M12 3v6m-3-3h6M5 12h6v7H5Zm9 0h6v7h-6M8 9v3m9-3v3M8 9h9' },
+  { tag: 'FLEXIBILIDAD EN CADA PANTALLA', title: 'Tu forma de trabajar tiene espacio.', description: 'Los componentes de React facilitan mejorar o personalizar partes de la plataforma y actualizar información sin recargar toda la página.', note: 'La interfaz web puede evolucionar de forma independiente de la aplicación móvil.', icon: 'M3 4h18v16H3ZM3 9h18M9 9v11m4-7h5m-5 3h3' },
+  { tag: 'UN MISMO PUNTO DE PARTIDA', title: 'Web y app, información conectada.', description: 'Tu equipo consulta y actualiza información desde ambos canales mediante los servicios centrales de Django.', note: 'React y React Native comparten las reglas de negocio implementadas en el backend.', icon: 'M2 4h12v10H2Zm4 14h4m-2-4v4M17 8h5v13h-5ZM5 7h6m7 11h3' },
 ]
 
 export function PlatformOverview() {
@@ -59,9 +59,9 @@ export function PlatformOverview() {
       </div>
     </div>
     <div id="platform-benefits" className="platform-benefits" aria-labelledby="platform-benefits-title">
-      <p className="eyebrow">TECNOLOGÍA QUE ACOMPAÑA TU OPERACIÓN</p>
-      <h3 id="platform-benefits-title">Una base conectada. Más posibilidades para crecer.</h3>
-      <div className="platform-benefit-grid">{benefits.map(([title, description], index) => <article key={title}><span className="platform-benefit-number" aria-hidden="true">0{index + 1}</span><h4>{title}</h4><p>{description}</p></article>)}</div>
+      <div className="platform-benefits-heading"><div><p className="eyebrow">¿QUÉ CAMBIA EN TU DÍA A DÍA?</p><h3 id="platform-benefits-title">Menos barreras para trabajar.<br/><em>Más espacio para crecer.</em></h3></div><p>La tecnología importa por lo que te permite hacer. Descubre seis ventajas de trabajar con una plataforma conectada.</p></div>
+      <div className="platform-benefit-grid">{benefits.map((benefit, index) => <article key={benefit.title}><div className="platform-benefit-top"><span className="platform-benefit-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d={benefit.icon}/></svg></span><span className="platform-benefit-number" aria-hidden="true">0{index + 1} / 06</span></div><p className="platform-benefit-tag">{benefit.tag}</p><h4>{benefit.title}</h4><p className="platform-benefit-description">{benefit.description}</p><p className="platform-benefit-note">{benefit.note}</p></article>)}</div>
+      <div className="platform-benefits-next"><p>¿Cuál de estas ventajas necesita hoy tu empresa?</p><a className="text-link" href="#contacto">Conversemos sobre tu operación <span aria-hidden="true">↗</span></a></div>
     </div>
   </section>
 }

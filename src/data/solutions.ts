@@ -10,3 +10,45 @@ if (parking) {
   parking.available = true
   parking.description = "Visualiza espacios, registra vehículos y conecta permanencia, cobro y comprobantes desde una sola plataforma."
 }
+
+const commercial = solutions.find(solution => solution.slug === "comercial")
+if (commercial) {
+  commercial.available = true
+  commercial.description = "Conecta ventas, compras, inventarios, facturación, cobranzas y caja con un ERP modular para tu negocio."
+}
+
+const logistics = solutions.find(solution => solution.slug === 'distribucion-logistica')
+if (logistics) {
+  logistics.available = true
+  logistics.description = 'Organiza vehículos, cargas consolidadas, programación, entregas e inventario para conectar tu operación logística.'
+}
+
+const drugstore = solutions.find(solution => solution.slug === 'droguerias')
+if (drugstore) {
+  drugstore.available = true
+  drugstore.description = 'Conecta catálogo de medicamentos, compras, inventario por lote y vencimiento y pedidos de venta para tu droguería.'
+}
+
+const hardware = solutions.find(solution => solution.slug === 'ferreterias')
+if (hardware) {
+  hardware.available = true
+  hardware.description = 'Organiza catálogo, precios por presentación, inventario por tienda, series y kits, conectando compras, ventas y cobranza.'
+}
+
+const dental = solutions.find(solution => solution.slug === 'odontologia')
+if (dental) {
+  dental.available = true
+  dental.description = 'Organiza pacientes, citas, registros odontológicos, recetas y cobros para conectar la atención y la gestión de tu consultorio.'
+}
+
+const agroindustry = solutions.find(solution => solution.slug === 'agroindustria')
+if (agroindustry) {
+  agroindustry.available = true
+  agroindustry.description = 'Conecta catálogo, compras, inventario por lotes, ventas, distribución y tareas para tu empresa agroindustrial.'
+}
+
+const associations = solutions.find(solution => solution.slug === 'colegios-profesionales')
+if (associations) {
+  associations.available = true
+  associations.description = 'Conecta padrón de colegiados, cuotas, cobranza y servicios institucionales con una base para tu portal del colegiado.'
+}
