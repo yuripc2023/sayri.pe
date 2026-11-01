@@ -1,11 +1,12 @@
-import { useEffect, useRef } from 'react'
+import { useLayoutEffect, useRef } from 'react'
 import type { RefObject } from 'react'
 import { chapters } from '../content'
 import type { ExperienceModel } from './model'
 
 export function useScrollTimeline(root: RefObject<HTMLElement | null>, model: ExperienceModel, enabled: boolean) {
   const jump = useRef<(index: number) => void>(() => {})
-  useEffect(() => {
+  // Revert GSAP pin reparenting before React removes the scene on tab changes.
+  useLayoutEffect(() => {
     if (!enabled || !root.current) return
     const element = root.current
     let cancelled = false

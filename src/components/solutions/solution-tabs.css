@@ -1,0 +1,35 @@
+.solution-tabs-content{--solution-accent:var(--election-accent,var(--commercial-accent,var(--logistics-accent,var(--parking-accent,var(--blue)))));color:var(--ink)}
+.solution-tabs-content .solution-caption{font-size:.82rem;line-height:1.7;color:var(--muted);margin-top:25px}
+.solution-tabs-content .solution-price-card p,.solution-tabs-content .solution-interface-card p{line-height:1.7;color:var(--muted);font-size:.95rem}
+.solution-tabs-content .solution-price-card h3,.solution-tabs-content .solution-interface-card h3{font-size:1.15rem}
+/* Navegación del contenido de la solución. */
+.solution-tabs{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;max-width:1200px;margin:32px auto 0;padding:8px 24px}
+.solution-tabs [role="tab"]{border:1px solid var(--line);border-radius:8px;padding:14px 24px;background:var(--paper);color:var(--muted);font:inherit;font-size:.9rem;font-weight:650;cursor:pointer;transition:background .2s,color .2s}
+.solution-tabs [role="tab"]:hover{color:var(--ink);background:var(--mist)}
+.solution-tabs [role="tab"][aria-selected="true"]{background:var(--solution-accent);border-color:var(--solution-accent);color:#fff}
+html[data-theme="dark"] .solution-tabs [role="tab"][aria-selected="true"]{color:#07121c}
+.solution-tabs-content [role="tabpanel"][hidden]{display:none}
+.solution-tabs-content [role="tab"]:focus-visible,.solution-tabs-content [role="tabpanel"]:focus-visible{outline:3px solid var(--solution-accent);outline-offset:4px}
+.solution-pricing-grid,.solution-interface-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:36px}
+.solution-price-card,.solution-interface-card{min-width:0;border:1px solid var(--line);border-radius:16px;padding:28px;background:var(--paper)}
+.solution-price-card{display:flex;flex-direction:column;align-items:flex-start}
+.solution-price-card h3,.solution-interface-card h3{line-height:1.4}
+.solution-tabs-content .solution-price-card .solution-price{font-size:2.4rem;font-weight:750;letter-spacing:-.04em;color:var(--ink);margin:8px 0 20px}
+.solution-price-card ul{padding-left:20px;margin:24px 0 32px;color:var(--muted);font-size:.9rem;line-height:1.8;flex:1}
+.solution-price-card .button{max-width:100%;font-size:.75rem;line-height:1.6}
+.solution-interface-placeholder{aspect-ratio:16/10;border:1px dashed var(--line);border-radius:8px;background:var(--mist);display:flex;flex-direction:column;justify-content:center;align-items:center;gap:12px;margin-bottom:24px;color:var(--muted);text-align:center}
+.solution-interface-placeholder span:first-child{font-size:2rem;color:var(--solution-accent)}
+.solution-interface-placeholder span:last-child{font-size:.6rem;letter-spacing:.12em}
+.solution-motion-loading,.solution-motion-end{padding:36px 24px;text-align:center;line-height:1.7;color:var(--muted)}
+.solution-motion-end{scroll-margin-top:110px}
+.solution-tabs-content .sayri-experience .story-reading p{color:var(--story-muted)}
+.solution-tabs-content .sayri-experience .story-reading h2{max-width:none}
+@media(max-width:900px){.solution-pricing-grid,.solution-interface-grid{grid-template-columns:1fr}.solution-price-card{max-width:600px;width:100%;margin:auto}.solution-tabs [role="tab"]{padding:14px 18px}}
+@media(max-width:540px){.solution-tabs{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding-inline:24px}.solution-tabs [role="tab"]{padding:14px 10px;font-size:.85rem}.solution-price-card,.solution-interface-card{padding:24px}}
+.solution-tabs-content>[role="tabpanel"]:not([id="solution-panel-caracteristicas"])>section:not(.sayri-experience){padding:75px max(24px,calc((100vw - 1200px)/2));scroll-margin-top:110px}
+.solution-tabs-content>[role="tabpanel"]:not([id="solution-panel-caracteristicas"])>section:not(.sayri-experience) h2{font-size:clamp(2rem,3.8vw,3.6rem);line-height:1.08;max-width:900px}
+.pending .solution-tabs-content>[role="tabpanel"]:not([id="solution-panel-caracteristicas"])>section:not(.sayri-experience),.pending .pending-solution-features{padding:55px 0}
+@media(max-width:540px){.solution-tabs-content>[role="tabpanel"]:not([id="solution-panel-caracteristicas"])>section:not(.sayri-experience){padding:55px 24px}.pending .solution-tabs-content>[role="tabpanel"]:not([id="solution-panel-caracteristicas"])>section:not(.sayri-experience){padding-inline:0}}
+
+.solution-tabs-content .sayri-experience p.story-description{color:var(--story-muted)}
+.solution-tabs-content .sayri-experience p.story-eyebrow{color:var(--story-accent);font-size:.65rem;line-height:1.6}
