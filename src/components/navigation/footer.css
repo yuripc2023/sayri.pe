@@ -38,3 +38,5 @@ footer.site-footer,html[data-theme="dark"] footer.site-footer{padding-top:32px;p
 .site-footer .footer-identity>.footer-logo{display:block;position:relative;width:180px;aspect-ratio:562/184;overflow:hidden;margin-bottom:18px}
 .site-footer .footer-logo .footer-sayri{position:absolute;max-width:none;width:110.32%;height:auto;left:-5.16%;top:-29.35%;margin:0;object-fit:initial}
 @media(max-width:600px){.site-footer .footer-identity>.footer-logo{width:160px;margin-bottom:14px}}
+
+.footer-base{flex-wrap:wrap}.footer-legal-links{display:flex;flex-wrap:wrap;gap:12px 24px}.footer-base .footer-legal-links a{flex-shrink:1}

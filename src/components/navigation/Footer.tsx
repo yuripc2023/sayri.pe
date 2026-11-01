@@ -37,6 +37,6 @@ export function Footer() {
         <a className="footer-contact-link" href={contact.whatsapp} target="_blank" rel="noreferrer">Hablar por WhatsApp <span aria-hidden="true">↗</span></a>
       </div>
     </div>
-    <div className="footer-base"><p>© {new Date().getFullYear()} SAYRI. Todos los derechos reservados.</p><Link to="/#sectores">Explorar especialidades <span aria-hidden="true">↑</span></Link></div>
+    <div className="footer-base"><p>© {new Date().getFullYear()} SAYRI. Todos los derechos reservados.</p><div className="footer-legal-links" role="group" aria-label="Información legal"><Link to="/politica-de-privacidad">Política de privacidad</Link><Link to="/terminos-y-condiciones">Términos y condiciones</Link></div><Link to="/#sectores">Explorar especialidades <span aria-hidden="true">↑</span></Link></div>
   </footer>
 }

@@ -1,0 +1,74 @@
+{
+  "/": {
+    "title": "SAYRI | Software de gestión empresarial y ERP en Perú",
+    "description": "Conecta ventas, compras, inventarios, facturación y cobranza con SAYRI. Software de gestión empresarial adaptable a tu sector. Solicita una demostración."
+  },
+  "/soluciones": {
+    "title": "Software de gestión por sector | Soluciones SAYRI",
+    "description": "Explora las soluciones de SAYRI para comercio, logística, droguerías, ferreterías, educación y otros sectores. Conoce sus funciones y solicita una demo."
+  },
+  "/soluciones/elecciones": {
+    "title": "Suffrage | Elecciones con claridad y control | SAYRI",
+    "description": "Organiza procesos electorales con Suffrage: padrones, candidaturas, votación asistida e identificada, resultados y herramientas para elecciones escolares."
+  },
+  "/soluciones/cocheras": {
+    "title": "Sayri Cocheras | Servicios, espacios y caja",
+    "description": "Conoce la base de SAYRI para cocheras: placa, servicios, espacios, pagos y caja. Definamos el desarrollo de estadías, tarifas y salida con cobro para tu parking."
+  },
+  "/soluciones/comercial": {
+    "title": "ERP Comercial | Ventas, inventarios y finanzas | SAYRI",
+    "description": "Conecta ventas, compras, inventarios, facturación, cobranzas y caja con el ERP Comercial de SAYRI. Una plataforma web modular para tu negocio."
+  },
+  "/soluciones/distribucion-logistica": {
+    "title": "Distribución y logística | Flota y despachos | SAYRI",
+    "description": "Organiza vehículos, cargas consolidadas, programación, entregas e inventario con SAYRI. Conecta la información de tu operación logística en una sola plataforma."
+  },
+  "/soluciones/droguerias": {
+    "title": "Gestión para droguerías | Lotes, inventario y pedidos | SAYRI",
+    "description": "Conecta catálogo de medicamentos, compras, inventario por lote y vencimiento y pedidos de venta con SAYRI. Conoce la base para gestionar tu droguería."
+  },
+  "/soluciones/ferreterias": {
+    "title": "Gestión para ferreterías | Catálogo, precios e inventario | SAYRI",
+    "description": "Organiza tu ferretería con SAYRI: catálogo, precios por presentación, inventario por tienda, series y kits. Conecta compras, ventas, caja y cobranza."
+  },
+  "/soluciones/odontologia": {
+    "title": "Gestión odontológica | Pacientes, agenda y cobros | SAYRI",
+    "description": "Conecta pacientes, agenda, registros odontológicos, recetas y cobranza con SAYRI Dental. Una base para implementar la gestión de tu consultorio o clínica."
+  },
+  "/soluciones/agroindustria": {
+    "title": "Gestión para agroindustria | Compras, lotes y distribución | SAYRI",
+    "description": "Conecta catálogo, compras, inventario por lotes, ventas y distribución con SAYRI. Una base comercial y administrativa para tu empresa agroindustrial."
+  },
+  "/soluciones/colegios-profesionales": {
+    "title": "Colegios profesionales | Padrón, cuotas y habilitación | SAYRI",
+    "description": "Conecta padrón de colegiados, cuotas, cobranza y habilitación con SAYRI. Una base para tu web institucional, portal del colegiado y gestión administrativa."
+  },
+  "/soluciones/educacion": {
+    "title": "Gestión educativa | Admisión, matrícula y cobranza | SAYRI",
+    "description": "Organiza alumnos, docentes, admisión, matrículas, certificados y cobranza con SAYRI. Una base para tu web institucional y sistema administrativo educativo."
+  },
+  "/soluciones/estudios-juridicos": {
+    "title": "Estudios jurídicos | Clientes, tareas y cobranza | SAYRI",
+    "description": "Organiza clientes, agenda, tareas, documentos y cobranza con SAYRI Jurídico. Conoce la base para arbitrajes y el alcance de implementación para tu estudio."
+  },
+  "/soluciones/planta-de-produccion": {
+    "title": "Plantas de producción | Abastecimiento e inventario | SAYRI",
+    "description": "Conecta materiales, compras, inventario por lotes, tareas, ventas y despachos con SAYRI. Conoce la base administrativa y el alcance para implementar fabricación."
+  },
+  "/soluciones/restaurantes": {
+    "title": "Gestión para restaurantes | Carta, mesas y caja | SAYRI",
+    "description": "Conecta carta, mesas, pedidos y caja con SAYRI Restaurantes. Conoce la base para implementar tu carta QR y organizar compras, inventario y atención."
+  },
+  "/soluciones/transporte-pasajeros": {
+    "title": "Transporte de pasajeros | Flota y alcance de implementación | SAYRI",
+    "description": "Conoce la base de flota y administración de SAYRI y el desarrollo necesario para viajes, horarios, asientos, reservas y boletos de pasajeros."
+  },
+  "/politica-de-privacidad": {
+    "title": "Política de privacidad | SAYRI",
+    "description": "Conoce cómo SAYRI utiliza tus datos de contacto, atiende tus solicitudes de privacidad y permite solicitar la eliminación de datos, incluido WhatsApp."
+  },
+  "/terminos-y-condiciones": {
+    "title": "Términos y condiciones | SAYRI",
+    "description": "Consulta las condiciones de uso del sitio de SAYRI, las solicitudes de demostración, los servicios de terceros y nuestros canales de atención."
+  }
+}

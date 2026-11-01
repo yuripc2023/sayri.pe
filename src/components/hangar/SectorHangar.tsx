@@ -9,9 +9,9 @@ import './capsules.css'
 const wideQuery = '(min-width: 1100px)'
 
 export function SectorHangar() {
-  const [selected, setSelected] = useState(() => Math.floor(Math.random() * armors.length))
+  const [selected, setSelected] = useState(0)
   const [paused, setPaused] = useState(false)
-  const [visibleCount, setVisibleCount] = useState(() => window.matchMedia(wideQuery).matches ? 5 : 3)
+  const [visibleCount, setVisibleCount] = useState(3)
   const buttons = useRef<(HTMLButtonElement | null)[]>([])
   const gesture = useRef<{ x: number; y: number; id: number } | null>(null)
   const suppressClick = useRef(false)
@@ -21,6 +21,7 @@ export function SectorHangar() {
   const move = (delta: number) => setSelected(index => wrap(index + delta))
 
   useEffect(() => {
+    setSelected(Math.floor(Math.random() * armors.length))
     const media = window.matchMedia(wideQuery)
     const update = () => setVisibleCount(media.matches ? 5 : 3)
     update()

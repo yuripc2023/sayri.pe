@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { useRef, useState } from 'react'
 import type { FormEvent } from 'react'
 import { emptyLead, submitLead, validateLead } from '../../services/leads'
@@ -82,6 +83,7 @@ export function ContactForm() {
       </fieldset>
       <fieldset className="contact-topics" disabled={sending}><legend>¿Qué te gustaría mejorar? <small>(opcional)</small></legend><div>{['Ventas', 'Inventarios', 'Facturación', 'Operación móvil', 'Otro'].map(topic => <label key={topic}><input type="checkbox" checked={topics.includes(topic)} onChange={() => setTopics(current => current.includes(topic) ? current.filter(item => item !== topic) : [...current, topic])} /><span>{topic}</span></label>)}</div></fieldset>
       <div role="status" aria-live="polite" className={success ? 'contact-success' : 'field-error'}>{message}</div>
+      <p className="contact-hint">Usaremos tus datos para atender tu solicitud. Consulta nuestra <Link to="/politica-de-privacidad" style={{ textDecoration: 'underline' }}>Política de privacidad</Link>.</p>
       <button className="button" type="submit" disabled={sending}>{sending ? 'Enviando…' : 'Quiero conversar sobre mi empresa'}<span aria-hidden="true">→</span></button>
     </form>
   </section>

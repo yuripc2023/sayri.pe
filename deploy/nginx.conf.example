@@ -1,0 +1,19 @@
+# Integrate into your existing HTTPS/TLS configuration; replace the root.
+server {
+    listen 80;
+    server_name sayri.pe www.sayri.pe;
+    return 301 https://www.sayri.pe$request_uri;
+}
+# In the TLS server for sayri.pe: return 301 https://www.sayri.pe$request_uri;
+# In the TLS server for www.sayri.pe:
+# root /var/www/sayri/dist;
+# index index.html;
+# error_page 404 /404.html;
+# location = /404.html { internal; }
+# location ~ ^(.+)/$ { return 301 $1$is_args$args; }
+# location / { try_files $uri/index.html $uri =404; }
+# location /assets/ {
+#     try_files $uri =404;
+#     expires 1y;
+#     add_header Cache-Control "public, immutable";
+# }
