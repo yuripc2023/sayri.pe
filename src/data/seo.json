@@ -28,8 +28,8 @@
     "description": "Conecta catálogo de medicamentos, compras, inventario por lote y vencimiento y pedidos de venta con SAYRI. Conoce la base para gestionar tu droguería."
   },
   "/soluciones/ferreterias": {
-    "title": "Gestión para ferreterías | Catálogo, precios e inventario | SAYRI",
-    "description": "Organiza tu ferretería con SAYRI: catálogo, precios por presentación, inventario por tienda, series y kits. Conecta compras, ventas, caja y cobranza."
+    "title": "Software para ferreterías | Ventas, inventario y rentabilidad | SAYRI",
+    "description": "Conecta ventas, inventario por tienda, compras, caja y facturación con SAYRI Ferreterías. Explora reportes de rentabilidad por producto, marca y vendedor."
   },
   "/soluciones/odontologia": {
     "title": "Gestión odontológica | Pacientes, agenda y cobros | SAYRI",

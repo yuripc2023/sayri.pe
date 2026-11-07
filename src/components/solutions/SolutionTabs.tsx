@@ -2,6 +2,9 @@ import { lazy, Suspense, useEffect, useRef, useState, type KeyboardEvent, type R
 import { useLocation, useNavigate } from 'react-router-dom'
 import { ScheduleDemoButton } from '../shared/ScheduleDemoButton'
 import { solutions } from '../../data/solutions'
+import { DentalInterfaces } from './DentalInterfaces'
+import { HardwareInterfaces } from './HardwareInterfaces'
+import { SolutionPricing } from './SolutionPricing'
 import './solution-tabs.css'
 
 const SayriExperience = lazy(() => import('../../experience/SayriExperience').then(module => ({ default: module.SayriExperience })))
@@ -59,11 +62,6 @@ export function SolutionTabs({ slug, children }: { slug: string; children: React
     event.preventDefault()
     tabButtons.current[next]?.focus()
   }
-  const plans = electoral ? [{ name: 'Esencial', price: 'S/ 490', text: 'Ejemplo para una elección de alcance acotado.', items: ['Configuración de un proceso', 'Preparación del padrón y candidaturas', 'Consulta de participación y resultados'] }, { name: 'Acompañado', price: 'S/ 990', text: 'Ejemplo con acompañamiento para el equipo organizador.', items: ['Alcance de Esencial como referencia', 'Orientación para preparar la información', 'Sesión de capacitación para operadores'] }, { name: 'Institucional', price: 'A cotizar', text: 'Para definir un alcance particular con tu organización.', items: ['Varias entidades o procesos', 'Necesidades de integración', 'Desarrollos y soporte por acordar'] }] : [
-    { name: 'Esencial', price: 'S/ 149', text: 'Ejemplo para empezar por una operación acotada.', items: ['Módulos iniciales por definir', 'Usuarios según el alcance acordado', 'Configuración y capacitación a cotizar'] },
-    { name: 'Crecimiento', price: 'S/ 299', text: 'Ejemplo para conectar más áreas de tu organización.', items: ['Módulos y usuarios por definir', 'Integraciones según evaluación', 'Acompañamiento por acordar'] },
-    { name: 'A medida', price: 'A cotizar', text: 'Para necesidades específicas de tu organización.', items: ['Alcance funcional personalizado', 'Implementación por etapas', 'Desarrollos y soporte por acordar'] },
-  ]
   const interfaces = electoral ? [
     { title: 'Procesos y candidaturas', text: 'Preparación de elecciones, listas e integrantes.' },
     { title: 'Padrón y jornada electoral', text: 'Revisión de electores y registro asistido de votos.' },
@@ -79,14 +77,7 @@ export function SolutionTabs({ slug, children }: { slug: string; children: React
     </div>
     <div ref={featuresPanel} id="solution-panel-caracteristicas" role="tabpanel" aria-labelledby="solution-tab-caracteristicas" tabIndex={0} hidden={activeTab !== 'caracteristicas'}>{children}</div>
     <div id="solution-panel-precios" role="tabpanel" aria-labelledby="solution-tab-precios" tabIndex={0} hidden={activeTab !== 'precios'}>
-      <section aria-labelledby="solution-pricing-title">
-        <p className="eyebrow">PRECIOS / EJEMPLO</p><h2 id="solution-pricing-title">{electoral ? 'Una propuesta según tu elección.' : 'Una propuesta para tu operación.'}</h2>
-        <p className="lead">Ejemplo ilustrativo de precios, sujeto a una cotización. Estos importes no constituyen una tarifa vigente ni una oferta de contratación.</p>
-        <div className="solution-pricing-grid">
-          {plans.map(plan => <article className="solution-price-card" key={plan.name}><h3>{plan.name}</h3><p className="solution-price">{plan.price}</p><p>{plan.text}</p><ul>{plan.items.map(item => <li key={item}>{item}</li>)}</ul><ScheduleDemoButton/></article>)}
-        </div>
-        <p className="solution-caption">{electoral ? 'Importes de ejemplo por proceso. Límites de electores, impuestos, soporte, plazos y desarrollos adicionales se definirán en la propuesta. Se mantiene la modalidad de votación asistida e identificada.' : 'Importes mensuales de ejemplo. Usuarios, módulos, impuestos, implementación, soporte e integraciones se definirán en la propuesta de cada organización.'}</p>
-      </section>
+      <SolutionPricing slug={slug} name={name}/>
     </div>
     <div id="solution-panel-como-funciona" role="tabpanel" aria-labelledby="solution-tab-como-funciona" tabIndex={0} hidden={activeTab !== 'como-funciona'}>
       {activeTab === 'como-funciona' && <>
@@ -96,9 +87,9 @@ export function SolutionTabs({ slug, children }: { slug: string; children: React
       </>}
     </div>
     <div id="solution-panel-interfaces" role="tabpanel" aria-labelledby="solution-tab-interfaces" tabIndex={0} hidden={activeTab !== 'interfaces'}>
-      <section aria-labelledby="solution-interfaces-title"><p className="eyebrow">INTERFACES DEL SISTEMA</p><h2 id="solution-interfaces-title">Conoce el entorno de {name}.</h2><p className="lead">Próximamente publicaremos aquí las capturas de las interfaces del sistema.</p>
+      <section aria-labelledby="solution-interfaces-title"><p className="eyebrow">INTERFACES DEL SISTEMA</p><h2 id="solution-interfaces-title">Conoce el entorno de {name}.</h2>{slug === 'odontologia' ? <DentalInterfaces/> : slug === 'ferreterias' ? <HardwareInterfaces/> : <><p className="lead">Próximamente publicaremos aquí las capturas de las interfaces del sistema.</p>
         <div className="solution-interface-grid">{interfaces.map((item, index) => <article className="solution-interface-card" key={item.title}><div className="solution-interface-placeholder" aria-hidden="true"><span>0{index + 1}</span><span>CAPTURA PRÓXIMAMENTE</span></div><h3>{item.title}</h3><p>{item.text}</p></article>)}</div>
-      </section>
+      </> }</section>
     </div>
   </div>
 }

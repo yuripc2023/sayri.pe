@@ -527,3 +527,73 @@ Los enlaces de módulos del hero y las URL con hash activan Características y d
 Verificación: `pnpm build`, 3 pruebas de leads, 3 de experiencia, 4 de SEO y `git diff --check` correctos. Se comparó con HEAD el número de secciones de las 14 páginas publicadas: todas se conservan. Playwright recorrió 360 combinaciones (15 rubros × 4 pestañas × 3 tamaños: 390/768/1440 × 2 temas) con reduced motion: cuatro opciones, un panel visible, un h1, ningún overflow horizontal ni canvas, sin errores de ejecución. Comprobó los enlaces de módulos de las 14 páginas publicadas desde otra pestaña y repitiendo el mismo hash; llegó aproximadamente a 95 px del borde superior. Se verificó End + Enter para activar Interfaces.
 
 La animación real se probó en Comercial, Distribución y Cocheras: avance a capítulo 2 y retorno a 0, cambio a Interfaces sin canvas ni pin-spacer residuales, reactivación y navegación al inicio sin escena ni pin restantes; sin errores de ejecución. Se comprobó fallback sin WebGL en Comercial (8 capítulos HTML, ningún canvas). Tras el ajuste final del color, se verificó el texto de capítulo en rgb(110, 200, 255). Capturas `output/playwright/solution-motion-*.png` y `rubros-tabs-*.png`; inspección directa de narrativa Comercial, precios Comercial desktop claro y Cocheras móvil oscuro. La comprobación de los dos temas en la matriz utilizó el atributo data-theme. No se enviaron formularios ni mensajes reales. No se realizó una auditoría completa de accesibilidad o rendimiento ni se repitió la animación real en los 15 rubros; continúa el aviso de bundle principal de más de 500 kB. No se desplegó.
+
+
+### Interfaces de odontología — 7 de noviembre de 2026
+
+Se copiaron los 15 PNG locales de ATIC a `public/assets/img/odontologia/`, conservando nombres. La pestaña Interfaces muestra 13 capturas en el orden de la página original, sin repetir el dashboard; los dos QR se conservan como archivos. Galería de dos columnas en escritorio y una hasta 900 px, carga diferida, textos alternativos y enlaces a originales en pestaña nueva.
+
+Validación: `pnpm build`, pruebas de leads y experience correctas; 13 imágenes responden HTTP 200. Capturas inspeccionadas a 1440, 768 y 390 px en `output/playwright/dental-interfaces-*.png`; sin overflow horizontal a 390 px. No se repitieron pruebas de formularios ni narrativa animada; cambio limitado a la galería. Continúa el aviso de bundle superior a 500 kB.
+
+
+### Visor modal de interfaces — 7 de noviembre de 2026
+
+La galería dental abre un dialog nativo con captura, resumen y explicación individual para las 13 pantallas. Incluye navegación circular con botones y flechas, contador, cierre con Escape, botón o fondo, bloqueo del scroll exterior y devolución del foco al disparador. Diseño lateral en escritorio y apilado en móvil, compatible con ambos temas.
+
+Verificado con Playwright: apertura, siguiente, flecha izquierda, Escape, retorno del foco y restauración del scroll. Capturas a 390, 768 y 1440 px, sin overflow interno horizontal; inspección visual en escritorio y móvil, incluido tema oscuro. Build y las seis pruebas existentes correctos. No se repitieron formulario ni experiencia 3D.
+
+
+### Captura ampliada en modal — 7 de noviembre de 2026
+
+Visor de hasta 1920 px, imagen a todo el ancho sin límite de altura artificial, título y explicación debajo. Cabecera y controles sticky dentro del modal desplazable. Build correcto; Playwright verificó contenido debajo de imagen, ausencia de overflow horizontal y cierre con Escape a 1440, 768 y 390 px. Capturas `output/playwright/dental-stacked-*.png`. Cambio de CSS; no se repitieron pruebas de formularios ni narrativa.
+
+
+### Rubros en la órbita 3D — 7 de noviembre de 2026
+
+La escena ya recibía los 15 rubros del catálogo. Se ajustó el encuadre para incluir los planos de texto y se agregó separación de etiquetas en coordenadas proyectadas, con espacio reservado para el logo central. Se mantienen las posiciones esféricas, profundidad, giro y navegación, sin setState por frame.
+
+Verificación: cálculo geométrico de los 15 planos cada 5 grados durante 360 grados en tres proporciones; build y seis pruebas existentes correctos. Playwright a 1440, 768 y 390 px, pausa/reactivación y reduced motion con Canvas desmontado y los 15 enlaces HTML disponibles. Capturas `output/playwright/solutions-final-*.png`. El servidor 5173 presentaba 504 de dependencias optimizadas obsoletas; después de recargar su configuración cargó la escena sin errores de consola (persiste advertencia THREE.Clock). No se hizo auditoría de rendimiento ni se validaron clics en todos los planos 3D.
+
+
+### Continuidad del movimiento orbital — 7 de noviembre de 2026
+
+Las correcciones de separación ahora interpolan posiciones proyectadas con amortiguación exponencial dependiente del tiempo, conservando el estado entre frames. Giro reducido de 0.16 a 0.10 rad/s con aceleración y frenado gradual al pasar el puntero. Opacidad suavizada con mínimo de 0.72 y planos sin prueba de profundidad para evitar ocultaciones entre etiquetas transparentes.
+
+Build y tres pruebas de experience correctos. Playwright en 5173: secuencia de tres capturas separadas por 1.5 s, móvil 390 px, pausa/reanudación y desmontaje con reduced motion; sin errores de consola, persisten advertencias de Three/controlador WebGL. Artefactos `output/playwright/solutions-smooth-*.png`. No se midieron FPS ni se realizó captura de una vuelta orbital completa.
+
+
+### Órbitas circulares planas — 7 de noviembre de 2026
+
+Se sustituyó la nube esférica por tres órbitas circulares concéntricas sin inclinación. Los 15 rubros mantienen radio, fase relativa y opacidad constantes; todos giran a 0.06 rad/s. Cámara ortográfica frontal, texto horizontal y anillos discretos. Se eliminaron TrackballControls, correcciones por colisión y cambios de profundidad. Pausar conserva el ángulo para continuar desde el mismo punto.
+
+Build, tres pruebas de experience y dos pruebas nuevas `node tests/sector-orbit.test.mjs` correctos. Estas últimas verifican radio en una vuelta completa, cierre del recorrido, continuidad y separación mayor que la diagonal de los planos para los 15 rubros. Playwright a 1440, 768 y 390 px, pausa/reanudación, fallback reduced motion con los 15 enlaces; sin errores de consola, persisten advertencias de Three/WebGL. Capturas `output/playwright/solutions-circular-final-*.png`. No se midieron FPS ni se capturó una vuelta completa en navegador.
+
+
+### Información e interfaces de Ferreterías — 7 de noviembre de 2026
+
+Se incorporó el contenido comercial útil de la página local de ATIC: retos de mostrador, inventario, caja y abastecimiento; análisis de ventas y utilidad por producto, marca, vendedor y sede; etapas de diagnóstico, migración, capacitación y acompañamiento; seis preguntas frecuentes. Se conservaron el catálogo, presentaciones, series, kits, ancla de módulos y CTA de demo. Se actualizó el resumen del catálogo y el SEO de la ruta.
+
+Los 12 JPEG originales se copiaron a `public/assets/img/ferreteria/` con nombres `1.jpeg` a `12.jpeg`, en orden numérico y con hashes SHA-256 idénticos. Cada pantalla tiene resumen y explicación específica. `InterfaceGallery` comparte con Odontología el modal de imagen completa y descripción inferior, navegación circular, teclado, cierre, foco y bloqueo del scroll. Al cambiar de captura el modal vuelve al inicio.
+
+Verificado: build completo con prerender y ocho pruebas existentes (leads, experience y órbita) correctos. Playwright recorrió y decodificó las 12 capturas en orden, comprobó navegación circular y con flechas, Escape, foco restaurado, scroll liberado y FAQ. Capturas a 1440, 768 y 390 px, sin overflow horizontal; inspección visual del modal en escritorio y móvil y de contenido oscuro. Se verificó también la galería de 13 capturas de Odontología tras extraer el componente común. No se enviaron leads, no se repitió la experiencia 3D ni se midió rendimiento; continúa el aviso de bundle principal superior a 500 kB. Artefactos `output/playwright/hardware-*.png`.
+
+
+### Planes Básico y A Medida — 7 de noviembre de 2026
+
+Se reemplazaron los tres planes ilustrativos por dos planes compartidos en las 15 soluciones: Básico a S/ 30 mensuales y A Medida sin importe fijo. `src/data/pricing.ts` centraliza el importe, cuatro módulos básicos específicos por rubro y los factores de cotización: dominio propio, facturación electrónica, sucursales adicionales y empresas con distintos RUC. Básico se presenta para una empresa con un RUC y una sede; las ampliaciones se cotizan. Se conserva el flujo existente de demo y se detallan configuración, migración, capacitación, soporte e impuestos en la propuesta.
+
+Validación: build con prerender y ocho pruebas existentes correctos. Playwright recorrió las 15 rutas y comprobó dos tarjetas, importe mensual, módulos, cuatro factores y dos CTA; capturas a 1440, 768 y 390 px, sin overflow horizontal, y revisión visual clara/oscura. Artefactos `output/playwright/pricing-*.png`. No se enviaron formularios, no se implementó cobro ni calculadora de adicionales.
+
+
+### Lectura de la tarjeta A Medida — 7 de noviembre de 2026
+
+Se redujeron los textos y se separaron los cuatro factores en bloques con fondo y borde, en dos columnas donde hay espacio y una en móvil o tarjetas estrechas. Cotización personalizada pasa a ser una etiqueta secundaria; el cierre agrupa las necesidades adicionales y el CTA. Se conserva S/ 30 mensuales en Básico. Ajuste compartido por todos los rubros.
+
+Build correcto. Playwright en Elecciones: cuatro factores, precio conservado y ausencia de overflow a 1440, 768 y 390 px; capturas del componente en temas oscuro y claro usando la preferencia guardada. Artefactos `output/playwright/custom-plan-readable-*.png`. No se repitió la matriz de 15 rutas ni las pruebas de servicios, ya que el cambio es de presentación y texto.
+
+
+### Migración, personalizaciones e IGV — 7 de noviembre de 2026
+
+A Medida incorpora dos bloques adicionales: migración de datos y funcionalidades personalizadas con costo adicional. El cierre menciona integraciones, automatizaciones, capacitación adicional y soporte especial, y distingue posibles cargos de implementación y mensuales. Básico muestra S/ 30 por mes + IGV; la nota compartida especifica que todos los precios y cotizaciones son más IGV.
+
+Build correcto y Playwright en Ferreterías: seis factores, etiqueta de IGV y ausencia de overflow a 1440, 768 y 390 px. Inspección de la tarjeta en escritorio y captura del Básico; artefactos `output/playwright/pricing-extras-*.png` y `pricing-basic-igv.png`. No se repitieron pruebas de servicios ni la matriz de 15 rutas por ser un cambio de texto y presentación en el componente compartido.

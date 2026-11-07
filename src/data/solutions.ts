@@ -32,7 +32,7 @@ if (drugstore) {
 const hardware = solutions.find(solution => solution.slug === 'ferreterias')
 if (hardware) {
   hardware.available = true
-  hardware.description = 'Organiza catálogo, precios por presentación, inventario por tienda, series y kits, conectando compras, ventas y cobranza.'
+  hardware.description = 'Conecta catálogo, inventario por tienda, ventas, caja y cobranza. Consulta la rentabilidad por producto, marca y vendedor.'
 }
 
 const dental = solutions.find(solution => solution.slug === 'odontologia')
