@@ -1,0 +1,10 @@
+/* En celular, presentar la mascota antes del contenido de cada solución. */
+@media (max-width: 650px) {
+  .commercial-hero > .commercial-portrait,
+  .parking-hero > .parking-portrait,
+  .elections-hero > .elections-portrait,
+  .logistics-hero > .logistics-portrait,
+  .solution-hero > .solution-portrait {
+    order: -1;
+  }
+}

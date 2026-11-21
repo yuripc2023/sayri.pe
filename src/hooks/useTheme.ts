@@ -11,5 +11,5 @@ function getSnapshot() {
 }
 
 export function useTheme() {
-  return useSyncExternalStore(subscribe, getSnapshot, () => 'light' as const)
+  return useSyncExternalStore(subscribe, getSnapshot, () => 'dark' as const)
 }

@@ -8,6 +8,7 @@ import './styles/palette.css'
 import './styles/home-sections.css'
 import './components/navigation/header.css'
 import './components/navigation/footer.css'
+import './styles/solution-mobile.css'
 const root = document.getElementById('root')!
 const app = <StrictMode><BrowserRouter><App /></BrowserRouter></StrictMode>
 if (root.hasChildNodes()) hydrateRoot(root, app)

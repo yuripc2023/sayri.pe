@@ -597,3 +597,7 @@ Build correcto. Playwright en Elecciones: cuatro factores, precio conservado y a
 A Medida incorpora dos bloques adicionales: migración de datos y funcionalidades personalizadas con costo adicional. El cierre menciona integraciones, automatizaciones, capacitación adicional y soporte especial, y distingue posibles cargos de implementación y mensuales. Básico muestra S/ 30 por mes + IGV; la nota compartida especifica que todos los precios y cotizaciones son más IGV.
 
 Build correcto y Playwright en Ferreterías: seis factores, etiqueta de IGV y ausencia de overflow a 1440, 768 y 390 px. Inspección de la tarjeta en escritorio y captura del Básico; artefactos `output/playwright/pricing-extras-*.png` y `pricing-basic-igv.png`. No se repitieron pruebas de servicios ni la matriz de 15 rutas por ser un cambio de texto y presentación en el componente compartido.
+
+### Soluciones en celular — 20 de noviembre de 2026
+
+Las páginas de soluciones muestran el retrato de la mascota antes del texto hasta 650px mediante orden visual CSS; el orden semántico del documento se conserva. Build correcto. Playwright sobre el build local: 14 soluciones a 390, 768 y 1440px (42 comprobaciones), sin overflow horizontal y con el orden CSS esperado. Captura móvil: `output/playwright/solution-mascot-mobile.png`. No se desplegó este ajuste.
