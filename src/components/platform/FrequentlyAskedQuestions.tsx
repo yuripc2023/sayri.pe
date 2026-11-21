@@ -6,6 +6,9 @@ const questions = [
   ['¿Puedo agregar nuevas capacidades después?', 'Sí. Puedes incorporar nuevas capacidades a medida que tu operación lo requiera. Revisamos cómo conectarlas con los procesos que ya utilizas y definimos el alcance de cada etapa.'],
   ['¿SAYRI funciona en celular?', 'SAYRI cuenta con capacidades móviles para distintos procesos, como consultar clientes o registrar pedidos. En la demostración podemos revisar cuáles se ajustan al trabajo de tu equipo.'],
   ['¿Puedo trabajar con varias sucursales?', 'La plataforma contempla escenarios multiempresa y multisucursal. Evaluamos la estructura de tu negocio, los accesos de cada equipo y la información que necesitas compartir entre sedes.'],
+  ['¿SAYRI puede crecer con mi empresa y soportar miles de usuarios?', 'Sí. SAYRI está preparado para acompañar operaciones con miles de usuarios. Definimos la configuración y el alcance según los procesos, los equipos y la demanda de tu empresa.'],
+  ['¿Puedo trabajar con diferentes monedas en SAYRI?', 'Sí. SAYRI permite trabajar con múltiples monedas para acompañar las operaciones de tu empresa. En la demostración revisamos las monedas que utilizas y cómo se integran en tus procesos.'],
+  ['¿SAYRI atiende empresas de otros países de habla hispana?', 'Sí. Trabajamos con empresas de países de habla hispana y ya contamos con presencia en el extranjero. Revisamos las necesidades de tu operación y los requisitos de tu país para definir el alcance de la implementación.'],
   ['¿Cómo solicito una demostración?', 'Puedes escribirnos por WhatsApp y contarnos qué quieres mejorar. Coordinamos una demostración según tu necesidad; también puedes usar la agenda cuando esté habilitada.'],
 ]
 
